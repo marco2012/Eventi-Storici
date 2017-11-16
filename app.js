@@ -5,7 +5,7 @@ var path = require('path');
 var handlebars  = require('express-handlebars'), hbs;
 var app = express();
 
-app.set('port', 1337);
+app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
 
 /* express-handlebars - https://github.com/ericf/express-handlebars
