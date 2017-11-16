@@ -1,0 +1,9 @@
+{
+    "name": "MVC-Express-Application",
+    "description": "An Express.js application using the MVC design pattern...",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "4.4.4",	
+        "express-handlebars": "1.1.0"
+    }
+}
