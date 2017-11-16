@@ -3,3 +3,8 @@ var https = require('https');
 var amqp = require('amqplib/callback_api');
 
 console.log("hello world")
+ledyOscar="ledyOscar"
+
+function ladyO(){
+  console.log(ladyOscar)
+}
