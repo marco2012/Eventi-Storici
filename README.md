@@ -1,6 +1,6 @@
 **Welcome**
 No pago afito.
-<<<<<<< HEAD
+
 Docker Docker
 se lo ricorda lei
 
