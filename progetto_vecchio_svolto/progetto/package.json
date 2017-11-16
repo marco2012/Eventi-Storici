@@ -1,0 +1,15 @@
+{
+  "name": "zero_flowers_pj",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "express": "^4.14.1"
+  }
+}
