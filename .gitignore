@@ -1,3 +1,7 @@
+
+#I file con queste estensioni vengono ignorati da GitHub#
+
+######################
 # OS generated files #
 ######################
 *.DS_Store
@@ -11,7 +15,4 @@ Thumbs.db
 
 #Compiled source#
 *.class
-*.o 
-
-
-
+*.o
