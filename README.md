@@ -1,5 +1,4 @@
 # **PROGETTO RC**
-
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
@@ -14,3 +13,6 @@ Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
 - [ ] Si devono usare Websocket e AMQP (o simili es MQTT)
 - [x] Il progetto deve essere su GITHUB
 - [ ] Le API del servizio REST implementato devono essere documentate su GITHUB
+
+
+![docker](/Materiale_di_Riferimento/docker_image.png)
