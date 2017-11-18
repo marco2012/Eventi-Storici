@@ -16,43 +16,48 @@ Più è numeroso il gruppo più deve essere sostanzioso il progetto
 
 
 
-#### Dipendenze
+### Dipendenze
 
 Per installare le dipendenze basta eseguire `npm install`, verranno lette dal file `package.json` e installate.
 
-#### Struttura Repository
+### Struttura Repository
 
 `tree -d -I 'node_modules|materiale_RC*'`
 ```
 .
 ├── Materiale_di_Riferimento
-│   ├── !Progetti\ Svolti
+│   ├── !Progetti_Svolti
 │   │   ├── Progetto\ 1\ (Google\ Drive)
 │   │   │   ├── progetto
 │   │   │   ├── retiEs1
 │   │   │   ├── retiEs2
 │   │   │   ├── retiEs3
 │   │   │   └── retiEs4
-│   │   └── Progetto\ 2\ (Goodreads)
+│   │   ├── Progetto\ 2\ (Goodreads)
+│   │   └── Progetto\ 3
 │   ├── ExpressMockup
 │   │   ├── config
 │   │   ├── models
 │   │   ├── public
 │   │   ├── routes
 │   │   └── views
-│   └── spotify-web-api-examples
-│       ├── authorization_code
-│       │   └── public
-│       ├── client_credentials
-│       └── implicit_grant
-│           └── public
+│   ├── spotify-web-api-examples
+│   │   ├── authorization_code
+│   │   │   └── public
+│   │   ├── client_credentials
+│   │   └── implicit_grant
+│   │       └── public
+│   └── update_repo_script
 ├── Pattern_MVC
 │   ├── controllers
 │   └── views
 │       ├── home
 │       └── layouts
-└── test_couchdb
-    └── controllers
+├── test_couchdb
+│   └── controllers
+└── test_mvc
+    ├── Controllers
+    └── Models
 ```
 
 <p align="center">
