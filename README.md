@@ -1,10 +1,10 @@
-# **PROGETTO RC**
+# **PROGETTO RETI DI CALCOLATORI**
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
 
 Tra 3 e 5 (in casi eccezzionali si può violare questo vincolo).
-Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
+Più è numeroso il gruppo più deve essere sostanzioso il progetto
 
 ## **Requisiti**
 - [ ] Il servizio REST implementato deve interfacciare almeno due servizi REST *esterni*, cioè non su localhost
@@ -14,7 +14,14 @@ Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
 - [x] Il progetto deve essere su GITHUB
 - [ ] Le API del servizio REST implementato devono essere documentate su GITHUB
 
-### **Struttura Repository**
+
+
+#### Dipendenze
+
+Per installare le dipendenze basta eseguire `npm install`, verranno lette dal file `package.json` e installate.
+
+#### Struttura Repository
+
 `tree -d -I 'node_modules|materiale_RC*'`
 ```
 .

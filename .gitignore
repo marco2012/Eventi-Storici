@@ -13,8 +13,13 @@
 ehthumbs.db
 Thumbs.db
 
+#################
 #Compiled source#
+#################
 *.class
 *.o
 
-/node_modules
+##########################
+# NodeJS generated files #
+##########################
+node_modules
