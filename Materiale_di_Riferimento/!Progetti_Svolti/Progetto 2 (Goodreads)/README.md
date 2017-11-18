@@ -1,4 +1,4 @@
-#[Progetto-Reti-di-Calcolatori](https://github.com/LMeucci/Progetto-Reti-di-Calcolatori)
+# [Progetto-Reti-di-Calcolatori](https://github.com/LMeucci/Progetto-Reti-di-Calcolatori)
 
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
@@ -15,18 +15,20 @@ Le API del servizio REST implementato devono essere documentate su GITHUB
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-### PRESENTAZIONE PROGETTO:
+### PRESENTAZIONE PROGETTO
+
 Il progetto presentato è stato realizzato da una sola persona ed è composto dai seguenti files:
 appReti.js.js, oauthG.js, apiGreads.js, codaFinal2.js, success.html, error.html
 
 
-### COSA:
+### COSA
+
 appReti implementa un servizio rest verso Google Drive tramite oauth 2.0 ed implementa un secondo servizio rest verso Goodreads.com
 
 E' utilizzato rabbitmq come servizio di notifica asincrona.
 
 
-### COME:
+### COME
 
 appReti richiede all'utente i permessi per accedere a Drive tramite oauthG, scarica la lista dei file presenti
 (in questo caso è importante, al fine di ottenere risultati consistenti, che siano presenti solo file che hanno per nome titoli di libri),
@@ -37,11 +39,11 @@ codaFinal2 riceve i messaggi inviati da appReti tramite il broker di rabbitmq e 
 
 
 #### Passaggio per passaggio:
-1. Vengono avviati su due prompt dei comandi separati, codaFinal2 e appReti
+1. Vengono avviati su due prompt dei comandi separati, *appReti* e *codaFinal2* (RabbitMQ **deve** essere in esecuzione)
 
 2. appReti attiva il server chiamando oauthG.getAccess(callback).
 
-3. L'utente inserisce localhost:3000 nel proprio browser per avviare il servizio rest.
+3. L'utente inserisce `localhost:3000` nel proprio browser per avviare il servizio rest.
 	(Un modo più elegante di gestire questo passaggio consiste nel creare una propria pagina web con all'interno un pulsante per innescare l'autorizzazione dei permessi)
 
 4. oauthG cattura la richiesta vuota("/") e ridirige l' utente alla maschera per la gestione dei permessi di google drive. Se l' utente non accetta viene aperta una pagina html di errore(è possibile ritentare reimmettendo nel browser localhost:3000), se invece accetta viene aperta  una pagina html che notifica l'esito positivo e prosegue con l'elaborazione.

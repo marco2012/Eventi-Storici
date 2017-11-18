@@ -1,0 +1,27 @@
+{
+  "name": "progetto_rc",
+  "version": "0.0.1",
+  "description": "Progetto di Reti di Calcolatori ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marco2012/Docker.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marco2012/Docker/issues"
+  },
+  "homepage": "https://github.com/marco2012/Docker#readme",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "net": "^1.0.2",
+    "path": "^0.12.7"
+  }
+}

@@ -17,4 +17,4 @@ Thumbs.db
 *.class
 *.o
 
-#/node_modules
+/node_modules
