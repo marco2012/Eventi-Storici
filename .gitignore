@@ -16,3 +16,5 @@ Thumbs.db
 #Compiled source#
 *.class
 *.o
+
+#/node_modules
