@@ -14,8 +14,7 @@ Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
 - [x] Il progetto deve essere su GITHUB
 - [ ] Le API del servizio REST implementato devono essere documentate su GITHUB
 
-## **Struttura**
-
+### **Struttura Repository**
 `tree -d -I 'node_modules|materiale_RC*'`
 ```
 .
@@ -49,4 +48,6 @@ Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
     └── controllers
 ```
 
-![docker](/Materiale_di_Riferimento/docker_image.png)
+<p align="center">
+  <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
+</p>
