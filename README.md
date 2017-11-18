@@ -14,5 +14,4 @@ Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
 - [x] Il progetto deve essere su GITHUB
 - [ ] Le API del servizio REST implementato devono essere documentate su GITHUB
 
-
 ![docker](/Materiale_di_Riferimento/docker_image.png)
