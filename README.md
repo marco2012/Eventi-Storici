@@ -14,6 +14,39 @@ Chiaramente più è numeroso il gruppo più deve essere sostanzioso il progetto
 - [x] Il progetto deve essere su GITHUB
 - [ ] Le API del servizio REST implementato devono essere documentate su GITHUB
 
+## **Struttura**
 
+`tree -d -I 'node_modules|materiale_RC*'`
+```
+.
+├── Materiale_di_Riferimento
+│   ├── !Progetti\ Svolti
+│   │   ├── Progetto\ 1\ (Google\ Drive)
+│   │   │   ├── progetto
+│   │   │   ├── retiEs1
+│   │   │   ├── retiEs2
+│   │   │   ├── retiEs3
+│   │   │   └── retiEs4
+│   │   └── Progetto\ 2\ (Goodreads)
+│   ├── ExpressMockup
+│   │   ├── config
+│   │   ├── models
+│   │   ├── public
+│   │   ├── routes
+│   │   └── views
+│   └── spotify-web-api-examples
+│       ├── authorization_code
+│       │   └── public
+│       ├── client_credentials
+│       └── implicit_grant
+│           └── public
+├── Pattern_MVC
+│   ├── controllers
+│   └── views
+│       ├── home
+│       └── layouts
+└── test_couchdb
+    └── controllers
+```
 
 ![docker](/Materiale_di_Riferimento/docker_image.png)
