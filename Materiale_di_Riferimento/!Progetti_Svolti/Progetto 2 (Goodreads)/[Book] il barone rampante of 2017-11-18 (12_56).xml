@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[aXsHkdwAd69oy6KmiLDSng]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[il barone rampante]]></query>
+    <results-start>1</results-start>
+    <results-end>4</results-end>
+    <total-results>4</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.06</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">1116822</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">49</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">1129638</id>
+    <title>Il Barone Rampante (Tutto In Un Ora)</title>
+    <author>
+      <id type="integer">555504</id>
+      <name>Stefano Anselmi</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">51718443</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">1</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>5.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">31114423</id>
+    <title>Form und Inhalt in Italo Calvinos "Il Barone Rampante"</title>
+    <author>
+      <id type="integer">4738240</id>
+      <name>Tobias Zander</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">865256</id>
+  <books_count type="integer">112</books_count>
+  <ratings_count type="integer">19556</ratings_count>
+  <text_reviews_count type="integer">975</text_reviews_count>
+  <original_publication_year type="integer">1957</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.06</average_rating>
+  <best_book type="Book">
+    <id type="integer">820645</id>
+    <title>Il barone rampante</title>
+    <author>
+      <id type="integer">155517</id>
+      <name>Italo Calvino</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1375547834m/820645.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1375547834s/820645.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1388277</id>
+  <books_count type="integer">52</books_count>
+  <ratings_count type="integer">1628</ratings_count>
+  <text_reviews_count type="integer">96</text_reviews_count>
+  <original_publication_year type="integer">1960</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.28</average_rating>
+  <best_book type="Book">
+    <id type="integer">3421140</id>
+    <title>I nostri antenati: Il visconte dimezzato - Il barone rampante - Il cavaliere inesistente</title>
+    <author>
+      <id type="integer">155517</id>
+      <name>Italo Calvino</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328193199m/3421140.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328193199s/3421140.jpg</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+</GoodreadsResponse>

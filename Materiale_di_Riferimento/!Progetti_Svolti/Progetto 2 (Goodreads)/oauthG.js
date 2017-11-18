@@ -39,7 +39,7 @@ exports.getAccess= function(callback){
 		}
 
 		authCode = req.query.code;                                              //nella risposta al grant se non ci sono errori è presente l'authentication code all'interno di una query
-		//console.log("\t"+"Authentication Code obtained: "+authCode);            //debug
+		//console.log("\t"+"Authentication Code obtained: "+authCode);          \//debug
 
 		var accessToken;
 		var options = {

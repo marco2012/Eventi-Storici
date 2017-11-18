@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[aXsHkdwAd69oy6KmiLDSng]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[mr mercedes]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>22</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.19</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">26680281</id>
+  <books_count type="integer">114</books_count>
+  <ratings_count type="integer">155924</ratings_count>
+  <text_reviews_count type="integer">12938</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">3</original_publication_day>
+  <average_rating>3.92</average_rating>
+  <best_book type="Book">
+    <id type="integer">18775247</id>
+    <title>Mr. Mercedes (Bill Hodges Trilogy, #1)</title>
+    <author>
+      <id type="integer">3389</id>
+      <name>Stephen King</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1468705326m/18775247.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1468705326s/18775247.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">42131595</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">144</ratings_count>
+  <text_reviews_count type="integer">16</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">24</original_publication_day>
+  <average_rating>4.12</average_rating>
+  <best_book type="Book">
+    <id type="integer">22631479</id>
+    <title>Mr. Mercedes by Stephen King - A 30-Minute Summary</title>
+    <author>
+      <id type="integer">7417162</id>
+      <name>Instaread Summaries</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1407109305m/22631479.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1407109305s/22631479.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">47454319</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">168</ratings_count>
+  <text_reviews_count type="integer">18</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.40</average_rating>
+  <best_book type="Book">
+    <id type="integer">27406812</id>
+    <title>The Bill Hodges Trilogy Boxed Set: Mr. Mercedes, Finders Keepers, and End of Watch (Bill Hodges Trilogy, #1-3)</title>
+    <author>
+      <id type="integer">3389</id>
+      <name>Stephen King</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1463042065m/27406812.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1463042065s/27406812.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">46233185</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">12</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2015</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">3</original_publication_day>
+  <average_rating>5.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">26240988</id>
+    <title>Stephen King Box Set: Mr. Mercedes, Everything's Eventual, Lisey's Story</title>
+    <author>
+      <id type="integer">3389</id>
+      <name>Stephen King</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1444663407m/26240988.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1444663407s/26240988.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">44736892</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">7</original_publication_month>
+  <original_publication_day type="integer">2</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">25055540</id>
+    <title>Book Sidekick - Mr. Mercedes (Unofficial)</title>
+    <author>
+      <id type="integer">7537387</id>
+      <name>BookBuddy</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">57875706</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">36234176</id>
+    <title>Summary &amp; Study Guide: Mr. Mercedes</title>
+    <author>
+      <id type="integer">4819027</id>
+      <name>BookRags</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">48415467</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">28354642</id>
+    <title>Mr. Mercedes: 5 Minute Digest</title>
+    <author>
+      <id type="integer">8290140</id>
+      <name>5 Minute Publications</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">42664533</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">3</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">8</original_publication_month>
+  <original_publication_day type="integer">4</original_publication_day>
+  <average_rating>2.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">23114825</id>
+    <title>Mr. Mercedes - 101 Amazing Facts: #1 Fun Facts &amp; Trivia Tidbits</title>
+    <author>
+      <id type="integer">7426356</id>
+      <name>G. Whiz</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">245197</id>
+  <books_count type="integer">224</books_count>
+  <ratings_count type="integer">16886</ratings_count>
+  <text_reviews_count type="integer">712</text_reviews_count>
+  <original_publication_year type="integer">1836</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.02</average_rating>
+  <best_book type="Book">
+    <id type="integer">29796379</id>
+    <title>La sirenita</title>
+    <author>
+      <id type="integer">6378</id>
+      <name>Hans Christian Andersen</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">46827181</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">31</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">26802528</id>
+    <title>Mr. Mercedes: Top 50 Facts Countdown</title>
+    <author>
+      <id type="integer">8319467</id>
+      <name>Top 50 Facts</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">46857539</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">18</ratings_count>
+  <text_reviews_count type="integer">2</text_reviews_count>
+  <original_publication_year type="integer">2015</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">20</original_publication_day>
+  <average_rating>4.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">26827367</id>
+    <title>Mr. Mercedes: A Novel By Stephen King (Trivia-On-Books)</title>
+    <author>
+      <id type="integer">14007778</id>
+      <name>Trivion Books</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">54307974</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">33540746</id>
+    <title>Conversations on Mr. Mercedes: A Novel By Stephen King | Conversation Starters</title>
+    <author>
+      <id type="integer">14585436</id>
+      <name>dailyBooks</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">43528</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">624</ratings_count>
+  <text_reviews_count type="integer">94</text_reviews_count>
+  <original_publication_year type="integer">1933</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.78</average_rating>
+  <best_book type="Book">
+    <id type="integer">9875192</id>
+    <title>La prometida del senor Hire (Mr. Hire's Engagement)</title>
+    <author>
+      <id type="integer">9693</id>
+      <name>Georges Simenon</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1465592183m/9875192.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1465592183s/9875192.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">49662058</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">11</ratings_count>
+  <text_reviews_count type="integer">1</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.27</average_rating>
+  <best_book type="Book">
+    <id type="integer">29407589</id>
+    <title>LIST SERIES: STEPHEN KING: SERIES READING ORDER: THE SHINING BOOKS, DARK TOWER BOOKS, TALISMAN BOOKS, GREEN MILE BOOKS, THE BILL HODGES TRILOGY, MR. MERCEDES TRILOGY, SHORT STORIES BY STEPHEN KING</title>
+    <author>
+      <id type="integer">14006347</id>
+      <name>List-Series</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1073231</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">622</ratings_count>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.97</average_rating>
+  <best_book type="Book">
+    <id type="integer">691212</id>
+    <title>Sword and Sorceress V</title>
+    <author>
+      <id type="integer">4841825</id>
+      <name>Marion Zimmer Bradley</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">44449591</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">7</original_publication_month>
+  <original_publication_day type="integer">28</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">24809963</id>
+    <title>Mr. Mercedes - 101 Amazing Facts You Didn't Know: #1 Fun Facts &amp; Trivia Tidbits</title>
+    <author>
+      <id type="integer">7426356</id>
+      <name>G. Whiz</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">49653936</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">1</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>2.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">29401340</id>
+    <title>Stephen King: Reading List - Shining Books, Dark Tower Books, Talisman Books, Green Mile Books, Mr. Mercedes Trilogy Books, etc.</title>
+    <author>
+      <id type="integer">3213529</id>
+      <name>Edward Peterson</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">47288152</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">27239983</id>
+    <title>Stephen King Series Reading Order &amp; Guide: The Shining, Mr. Mercedes, The Talisman, Green Mile, The Dark Tower, and every other book! (SeriesReadingOrder.com Book List 4)</title>
+    <author>
+      <id type="integer">14052156</id>
+      <name>Booklist</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">51687523</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">31083611</id>
+    <title>Mercedes</title>
+    <author>
+      <id type="integer">15470743</id>
+      <name>MR Jane Pessine</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">19406175</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2001</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">13772450</id>
+    <title>Sr. Futuro y Jose = Mr. Futuro and Jose</title>
+    <author>
+      <id type="integer">5858891</id>
+      <name>Moses Mercedes</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+</GoodreadsResponse>
