@@ -1,6 +1,6 @@
-//Ho porvato a smmulare un app che gestice utenti e commenti, piu che altro per capire come interagire un po meglio con couchdb
-//Per farla funzionare inserite due documenti a picare su couchdb con id  "7eefa40a3b33cbfc888ab25370013d89" e "7eefa40a3b33cbfc888ab25370010a2a"
-//Ovviamente fa schifo perche on manda risposte quindi il browser non [ reattivo per; sono riuscito a estrapolaredati dal database,non rimane che capire come restituirli
+//Ho provato a simulare un app che gestice utenti e commenti, piu che altro per capire come interagire un po meglio con couchdb
+//Per farla funzionare inserite due documenti a piacere su couchdb con id  "7eefa40a3b33cbfc888ab25370013d89" e "7eefa40a3b33cbfc888ab25370010a2a"
+//Ovviamente l'app fa schifo perche non manda risposte, quindi il browser non è reattivo,tuttavia  sono riuscito a estrapolare dati dal database,non rimane che capire come restituirli
 //in maniera piu decente
 
 
