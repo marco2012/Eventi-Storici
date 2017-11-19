@@ -1,10 +1,6 @@
 # **PROGETTO RETI DI CALCOLATORI**
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
-<p align="right">
-  <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
-</p>
-
 ## **Persone nel gruppo**
 
 Tra 3 e 5 (in casi eccezzionali si può violare questo vincolo).
