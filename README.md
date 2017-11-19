@@ -14,51 +14,38 @@ Più è numeroso il gruppo più deve essere sostanzioso il progetto
 - [x] Il progetto deve essere su GITHUB
 - [ ] Le API del servizio REST implementato devono essere documentate su GITHUB
 
+## **Dipendenze**
 
+Per installare le dipendenze basta eseguire `npm install`, verranno lette dal file *package.json* e installate.
 
-### Dipendenze
+## **Cose utili**
 
-Per installare le dipendenze basta eseguire `npm install`, verranno lette dal file `package.json` e installate.
+**Repository GitHub**
+https://github.com/marco2012/Docker
+
+**Guida Git**
+https://rogerdudler.github.io/git-guide/index.it.html
+
+**Account Google**
+```
+email: dockervrun@gmail.com
+pass:  behdaicapolavoro
+```
+**Firebase API**
+https://firebase.google.com/docs/reference/rest/database/
+
+**Firebase PROJECT_ID**
+`docker-d7f6b`
+
+**Google API**
+https://console.developers.google.com/
+
+**Varie API**
+https://www.programmableweb.com/
 
 ### Struttura Repository
 
 `tree -d -I 'node_modules|materiale_RC*'`
-```
-.
-├── Materiale_di_Riferimento
-│   ├── !Progetti_Svolti
-│   │   ├── Progetto\ 1\ (Google\ Drive)
-│   │   │   ├── progetto
-│   │   │   ├── retiEs1
-│   │   │   ├── retiEs2
-│   │   │   ├── retiEs3
-│   │   │   └── retiEs4
-│   │   ├── Progetto\ 2\ (Goodreads)
-│   │   └── Progetto\ 3
-│   ├── ExpressMockup
-│   │   ├── config
-│   │   ├── models
-│   │   ├── public
-│   │   ├── routes
-│   │   └── views
-│   ├── spotify-web-api-examples
-│   │   ├── authorization_code
-│   │   │   └── public
-│   │   ├── client_credentials
-│   │   └── implicit_grant
-│   │       └── public
-│   └── update_repo_script
-├── Pattern_MVC
-│   ├── controllers
-│   └── views
-│       ├── home
-│       └── layouts
-├── test_couchdb
-│   └── controllers
-└── test_mvc
-    ├── Controllers
-    └── Models
-```
 
 <p align="center">
   <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
