@@ -66,6 +66,9 @@ pass:  behdaicapolavoro
 **Google API**
 https://console.developers.google.com/
 
+**Google calendar**
+https://developers.google.com/google-apps/calendar/create-events
+
 **Varie API**
 https://www.programmableweb.com/
 
