@@ -6,13 +6,82 @@
     <script type="text/javascript" language="javascript">
       var valueMese=0;
 
+      function validaGiorno() {
+        var giorno = parseInt(document.eseform.giorno.value);
+        if (isNaN(giorno)) {
+          alert("Il giorno deve essere un numero");
+          document.eseform.giorno.value=01;
+          return false;
+        }
+        console.log("sono qui!");
+        if(giorno<1 || giorno>31){
+          alert("Il giorno deve essere compreso tra 1 e 31");
+          document.eseform.giorno.value=01;
+          return false;
+        }
+        return true;
+      }
+      function validaForm() {
+        var giorno = parseInt(document.eseform.giorno.value);
+        var mese = document.eseform.mese.value;
+        if(mese=="nessuno"){
+          alert('inserire il mese');
+          return false;
+        }
+        var numero_mese=0;
+        switch (mese) {
+          case "gennaio":
+              numero_mese=1;
+              break;
+          case "febbraio":
+              numero_mese=2;
+              break;
+          case "marzo":
+              numero_mese=3;
+              break;
+          case "aprile":
+              numero_mese=4;
+              break;
+          case "maggio":
+              numero_mese=5;
+              break;
+          case "giugno":
+              numero_mese=6;
+              break;
+          case "luglio":
+              numero_mese=7;
+              break;
+          case "agosto":
+              numero_mese=8;
+              break;
+          case "settembre":
+              numero_mese=9;
+              break;
+          case "ottobre":
+              numero_mese=10;
+              break;
+          case "novembre":
+              numero_mese=11;
+              break;
+          default:
+              numero_mese=12;
+              break;
+          }
+
+        console.log("data:"+giorno+"/"+numero_mese);
+        //window.location.href = 'http://www.mrwebmaster.it/nuova-pagina.html'
+        location.href = "www.history.muffinlabs.com/date/2/14";
+        return true;
+      }
+      //action="http://history.muffinlabs.com/"
     </script>
   </head>
-  <body>
-    <form action="http://www.google.it" method="post">
+  <body bgcolor="#0db7ed">
+    <form name="eseform"> <!-- action="" method="post"></!-->
       <h1>Docker forever</h1>
-      <h5>inserisci la data da cercare</h5>
-      Giorno: <input name="giorno" type="text" size="2" maxlength="2" onchange="return validaGiorno();"><br><br>
+      <h3>inserisci la data da cercare</h3>
+      Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
+      <br><br>
       Mese: <select name="mese">
         <option value="nessuno" selected>nessuno</option>
         <option value="gennaio">gennaio</option>
@@ -27,6 +96,9 @@
         <option value="ottobre">ottobre</option>
         <option value="novembre">novembre</option>
         <option value="dicembre">dicembre</option>
+    </select><br>
+    <input type="submit" name="send" value="Invia" onclick="return validaForm();">
+    <input type="reset" name="reset" value="Reset">
     </form>
   </body>
 </html>
