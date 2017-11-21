@@ -27,27 +27,30 @@ Una volta ottenuti gli eventi storici relativi alla data, l'applicazione si conn
 
 Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su CouchDB attraverso Working queue fornita da RabbitMQ.
 
-## **Compiti (Provvisori)**
+
+## **Compiti *Provvisori* **
 
 ### Marco:
-1. [ ] Autenticazione a Google Drive tramite Outh
+- [ ] Autenticazione a Google Drive tramite Outh
 
 ### Francesca
-2. [ ] Creazione di un file sul drive
-3. [ ] Scrittura degli eventi sul file Google Drive
+- [ ] Creazione di un file sul drive
+- [ ] Scrittura degli eventi sul file Google Drive
 
 ### Francesco
-3. [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
+- [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
 
 ### Aldo
-4. [ ] Reperimento dei link ai video storici tramite youtube
+- [ ] Reperimento dei link ai video storici tramite youtube
+- [ ] Pagina iniziale in HTMl 
 
 ### Giuseppe
-7. [ ] Scrittura dei dati dei CouchDB
+- [ ] Scrittura dei dati dei CouchDB
 
 ### Gruppo
-?. WebSocket
-6. [ ] Creazione del processo scrittore tramite RabbitMQ
+?. [ ] WebSocket
+?. [ ] Creazione del processo scrittore tramite RabbitMQ
+
 
 ## **Cose utili**
 
