@@ -68,10 +68,9 @@
               break;
           }
 
-        console.log("data:"+giorno+"/"+numero_mese);
-        //window.location.href = 'http://www.mrwebmaster.it/nuova-pagina.html'
-        window.location.replace('http://www.mrwebmaster.it/nuova-pagina.html');
-        //location.href = "http://www.history.muffinlabs.com/date/2/14";
+        var data = "date/"+numero_mese+"/"+giorno;
+        console.log(data);
+        location.href = 'http://history.muffinlabs.com/'+data;
         return true;
       }
       //action="http://history.muffinlabs.com/"
@@ -98,7 +97,7 @@
         <option value="novembre">novembre</option>
         <option value="dicembre">dicembre</option>
     </select><br>
-    <input type="button" value="Invia" onclick="location.href = 'http://  history.muffinlabs.com/date/2/14';" >
+    <input type="button" name="Invia" value="Invia" onclick="return validaForm();" >
     <input type="reset" name="reset" value="Reset">
     </form>
   </body>
