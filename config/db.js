@@ -48,3 +48,4 @@ exports.fetch(date, callback) {
         }
     })
 }
+
