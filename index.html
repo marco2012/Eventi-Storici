@@ -77,14 +77,14 @@
     </script>
   </head>
   <body bgcolor="#0db7ed">
-    <form name="eseform"> <!-- action="" method="post"></!-->
+    <form name="eseform" action=""> <!-- action="" method="post"></!-->
       <h1>Docker forever</h1>
       <h3>inserisci la data da cercare</h3>
       Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
       <br><br>
       Mese: <select name="mese">
-        <option value="nessuno" selected>nessuno</option>
-        <option value="gennaio">gennaio</option>
+        <option value="nessuno">nessuno</option>
+        <option value="gennaio" selected>gennaio</option>
         <option value="febbraio">febbraio</option>
         <option value="marzo">marzo</option>
         <option value="aprile">aprile</option>
@@ -97,7 +97,7 @@
         <option value="novembre">novembre</option>
         <option value="dicembre">dicembre</option>
     </select><br>
-    <input type="submit" name="send" value="Invia" onclick="return validaForm();">
+    <input type="button" value="Invia" onclick="location.href = 'http://  history.muffinlabs.com/date/2/14';" >
     <input type="reset" name="reset" value="Reset">
     </form>
   </body>
