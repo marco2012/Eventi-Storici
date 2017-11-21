@@ -31,7 +31,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 ## **Compiti *Provvisori* **
 
 ### Marco:
-- [ ] Autenticazione a Google Drive tramite Outh
+- [ ] Autenticazione a Google Drive tramite Oauth
 
 ### Francesca
 - [ ] Creazione di un file sul drive
@@ -41,41 +41,43 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 - [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
 
 ### Aldo
-- [ ] Reperimento dei link ai video storici tramite youtube
-- [ ] Pagina iniziale in HTMl 
+- [ ] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
+- [x] Pagina iniziale in HTMl
 
 ### Giuseppe
 - [ ] Scrittura dei dati dei CouchDB
 
 ### Gruppo
-?. [ ] WebSocket
-?. [ ] Creazione del processo scrittore tramite RabbitMQ
+- [ ] WebSocket
+- [ ] Creazione del processo scrittore tramite RabbitMQ
 
 
 ## **Cose utili**
+<p align="center">
+**Repository GitHub**   
+https://github.com/marco2012/Docker   
 
-**Repository GitHub**
-https://github.com/marco2012/Docker
+**Guida Git**   
+https://rogerdudler.github.io/git-guide/index.it.html   
 
-**Guida Git**
-https://rogerdudler.github.io/git-guide/index.it.html
-
-**Account Google**
+**Account Google**  
 ```
 email: dockervrun@gmail.com
-pass:  behdaicapolavoro
+```   
 ```
+pass:  behdaicapolavoro
+```   
 
-**Google API**
-https://console.developers.google.com/
+**Google API**  
+https://console.developers.google.com/  
 
-**Google calendar**
-https://developers.google.com/google-apps/calendar/create-events
+**Google calendar**   
+https://developers.google.com/google-apps/calendar/create-events  
 
-**Varie API**
-https://www.programmableweb.com/
+**Varie API**   
+https://www.programmableweb.com/  
 https://www.rabbitmq.com/
-
+</p>
 <p align="center">
   <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
 </p>
