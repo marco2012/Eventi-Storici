@@ -71,6 +71,7 @@ https://developers.google.com/google-apps/calendar/create-events
 
 **Varie API**
 https://www.programmableweb.com/
+https://www.rabbitmq.com/
 
 <p align="center">
   <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
