@@ -18,6 +18,38 @@ Più è numeroso il gruppo più deve essere sostanzioso il progetto
 
 Per installare le dipendenze basta eseguire `npm install`, verranno lette dal file *package.json* e installate.
 
+
+## **Descrizione**
+
+Il progetto utilizza le API fornite da http://history.muffinlabs.com/date/ per prendere tutti gli evevnti storici avvenuti in un giorno particolare.
+
+Una volta ottenuti gli eventi storici relativi alla data, l'applicazione si connette tramite outh a Google Drive e crea un file contenente una lista di eventi con i link alla relativa pagina wikipedia (e se c'è tempo anche i link di video presi da youtube).
+
+Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su CouchDB attraverso Working queue fornita da RabbitMQ.
+
+## **Compiti (Provvisori)**
+
+### Marco:
+1. [ ] Autenticazione a Google Drive tramite Outh
+
+### Francesca
+2. [ ] Creazione di un file sul drive
+3. [ ] Scrittura degli eventi sul file Google Drive
+
+### Francesco
+3. [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
+
+4. [ ] Reperimento dei link ai video storici tramite youtube
+
+### Aldo
+6. [ ] Creazione del processo scrittore tramite RabbitMQ
+
+###
+?. WebSocket
+
+### Giuseppe
+7. [ ] Scrittura dei dati dei CouchDB
+
 ## **Cose utili**
 
 **Repository GitHub**
@@ -31,21 +63,15 @@ https://rogerdudler.github.io/git-guide/index.it.html
 email: dockervrun@gmail.com
 pass:  behdaicapolavoro
 ```
-**Firebase API**
-https://firebase.google.com/docs/reference/rest/database/
-
-**Firebase PROJECT_ID**
-`docker-d7f6b`
 
 **Google API**
 https://console.developers.google.com/
 
+**Google calendar**
+https://developers.google.com/google-apps/calendar/create-events
+
 **Varie API**
 https://www.programmableweb.com/
-
-## Struttura Repository
-
-`tree -d -I 'node_modules|materiale_RC*'`
 
 <p align="center">
   <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
