@@ -42,7 +42,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 
 ### Aldo
 - [ ] Reperimento dei link ai video storici tramite youtube
-- [ ] Pagina iniziale in HTMl 
+- [x] Pagina iniziale in HTMl 
 
 ### Giuseppe
 - [ ] Scrittura dei dati dei CouchDB

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Docker ti amo!</title>
     <script type="text/javascript" language="javascript">
-      var valueMese=0;
 
       function validaGiorno() {
         var giorno = parseInt(document.eseform.giorno.value);
@@ -99,8 +98,8 @@
       Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
       <br><br>
       Mese: <select name="mese">
-        <option value="nessuno">nessuno</option>
-        <option value="gennaio" selected>gennaio</option>
+        <option value="nessuno" selected>Seleziona</option>
+        <option value="gennaio">gennaio</option>
         <option value="febbraio">febbraio</option>
         <option value="marzo">marzo</option>
         <option value="aprile">aprile</option>
