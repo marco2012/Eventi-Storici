@@ -23,3 +23,4 @@ exports.search(date, callback) {
         else callback(null, doc)
     })
 }
+
