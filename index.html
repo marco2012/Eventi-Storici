@@ -21,6 +21,7 @@
         }
         return true;
       }
+
       function validaForm() {
         var giorno = parseInt(document.eseform.giorno.value);
         var mese = document.eseform.mese.value;
@@ -68,9 +69,24 @@
               break;
           }
 
-        var data = "date/"+numero_mese+"/"+giorno;
+        var data = numero_mese+"/"+giorno;
         console.log(data);
-        location.href = 'http://history.muffinlabs.com/'+data;
+        location.href = 'http://history.muffinlabs.com/date/'+data;
+        return true;
+      }
+
+      function dataOggi() {
+        var today = new Date();
+      	var dd = today.getDate();
+      	var mm = today.getMonth()+1; //January is 0!
+      	if(dd<10){
+      	    dd='0'+dd;
+      	}
+      	if(mm<10){
+      	    mm='0'+mm;
+      	}
+      	var data = mm+'/'+dd;
+        location.href = 'http://history.muffinlabs.com/date/'+data;
         return true;
       }
       //action="http://history.muffinlabs.com/"
@@ -98,6 +114,7 @@
         <option value="dicembre">dicembre</option>
     </select><br>
     <input type="button" name="Invia" value="Invia" onclick="return validaForm();" >
+    <input type="button" name="Oggi" value="Eventi del giorno" onclick="return dataOggi();">
     <input type="reset" name="reset" value="Reset">
     </form>
   </body>
