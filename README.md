@@ -1,3 +1,5 @@
+<img src="/Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" align="right" height="50" width=""/>
+
 # **PROGETTO RETI DI CALCOLATORI**
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
@@ -37,8 +39,12 @@ Oltre all'operazione di scrittura sul Drive, gli eventi vengono salvati su Couch
 3. [ ] Scrittura degli eventi sul file Google Drive
 
 ### Francesco
+<<<<<<< HEAD
 3. [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
 
+=======
+- [ ] Reperimento dei dati da http://history.muffinlabs.com/date/2/14 e salvataggio in variabili
+>>>>>>> 2893da52a6ab8715767934f49831ab86e7244d3c
 
 ### Aldo
 4. [ ] Reperimento dei link ai video storici tramite youtube
@@ -70,6 +76,14 @@ https://console.developers.google.com/
 **Google calendar**
 https://developers.google.com/google-apps/calendar/create-events
 
+<<<<<<< HEAD
+=======
+**Oauth**
+https://developers.google.com/identity/protocols/OAuth2WebServer#redirectingprev
+
+https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
+
+>>>>>>> 2893da52a6ab8715767934f49831ab86e7244d3c
 **Varie API**
 https://www.programmableweb.com/
 https://www.rabbitmq.com/
