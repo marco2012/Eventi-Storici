@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Docker ti amo!</title>
+
+    <style>
+      h1 {font-family: monospace; text-align:center;}
+      h3 {font-family: helvetica; text-align:center;}
+    </style>
+
     <script type="text/javascript" language="javascript">
 
       function validaGiorno() {
         var giorno = parseInt(document.eseform.giorno.value);
+
         if (isNaN(giorno)) {
           alert("Il giorno deve essere un numero");
           document.eseform.giorno.value=01;
           return false;
         }
-        console.log("sono qui!");
         if(giorno<1 || giorno>31){
           alert("Il giorno deve essere compreso tra 1 e 31");
           document.eseform.giorno.value=01;
@@ -90,31 +96,36 @@
       }
       //action="http://history.muffinlabs.com/"
     </script>
+
   </head>
   <body bgcolor="#0db7ed">
-    <form name="eseform" action=""> <!-- action="" method="post"></!-->
-      <h1>Docker forever</h1>
-      <h3>inserisci la data da cercare</h3>
-      Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
-      <br><br>
-      Mese: <select name="mese">
-        <option value="nessuno" selected>Seleziona</option>
-        <option value="gennaio">gennaio</option>
-        <option value="febbraio">febbraio</option>
-        <option value="marzo">marzo</option>
-        <option value="aprile">aprile</option>
-        <option value="maggio">maggio</option>
-        <option value="giugno">giugno</option>
-        <option value="luglio">luglio</option>
-        <option value="agosto">agosto</option>
-        <option value="settembre">settembre</option>
-        <option value="ottobre">ottobre</option>
-        <option value="novembre">novembre</option>
-        <option value="dicembre">dicembre</option>
-    </select><br>
-    <input type="button" name="Invia" value="Invia" onclick="return validaForm();" >
-    <input type="button" name="Oggi" value="Eventi del giorno" onclick="return dataOggi();">
-    <input type="reset" name="reset" value="Reset">
-    </form>
+    <div align="center">
+      <form name="eseform" action="">
+        <h1>Docker forever</h1>
+        <h3>Inserisci la data da cercare</h3>
+        Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
+        <!-- <br><br> -->
+        Mese: <select name="mese">
+          <option value="nessuno" selected>Seleziona</option>
+          <option value="gennaio">gennaio</option>
+          <option value="febbraio">febbraio</option>
+          <option value="marzo">marzo</option>
+          <option value="aprile">aprile</option>
+          <option value="maggio">maggio</option>
+          <option value="giugno">giugno</option>
+          <option value="luglio">luglio</option>
+          <option value="agosto">agosto</option>
+          <option value="settembre">settembre</option>
+          <option value="ottobre">ottobre</option>
+          <option value="novembre">novembre</option>
+          <option value="dicembre">dicembre</option>
+      </select><br><br>
+      <input type="button" name="Invia" value="Invia" onclick="return validaForm();" >
+      <input type="reset" name="reset" value="Reset">
+      <input type="button" name="Oggi" value="Eventi del giorno" onclick="return dataOggi();">
+      </form>
+      <br>
+      <img src="/Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" height="60" width=""/>
+    </div>
   </body>
 </html>
