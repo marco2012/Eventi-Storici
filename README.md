@@ -28,7 +28,7 @@ Una volta ottenuti gli eventi storici relativi alla data, l'applicazione si conn
 Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su CouchDB attraverso Working queue fornita da RabbitMQ.
 
 
-## **Compiti *Provvisori* **
+## **Compiti *Provvisori***
 
 ### Marco:
 - [ ] Autenticazione a Google Drive tramite Oauth
@@ -41,48 +41,40 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 - [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
 
 ### Aldo
-<<<<<<< HEAD
 - [ ] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
 - [x] Pagina iniziale in HTMl
-=======
-- [ ] Reperimento dei link ai video storici tramite youtube
-- [x] Pagina iniziale in HTMl 
->>>>>>> c687161806596a84f142f8dd91d6a872fa4508d7
 
 ### Giuseppe
 - [ ] Scrittura dei dati dei CouchDB
 
 ### Gruppo
 - [ ] WebSocket
-- [ ] Creazione del processo scrittore tramite RabbitMQ
+- [ ] RabbitMQ
 
 
 ## **Cose utili**
-<p align="center">
-**Repository GitHub**   
-https://github.com/marco2012/Docker   
 
-**Guida Git**   
-https://rogerdudler.github.io/git-guide/index.it.html   
+**Repository GitHub**
+https://github.com/marco2012/Docker
 
-**Account Google**  
+**Guida Git**
+https://rogerdudler.github.io/git-guide/index.it.html
+
+**Account Google**
 ```
 email: dockervrun@gmail.com
-```   
-```
 pass:  behdaicapolavoro
-```   
+```
+**Google API**
+https://console.developers.google.com/
 
-**Google API**  
-https://console.developers.google.com/  
+**Google calendar**
+https://developers.google.com/google-apps/calendar/create-events
 
-**Google calendar**   
-https://developers.google.com/google-apps/calendar/create-events  
-
-**Varie API**   
-https://www.programmableweb.com/  
+**Varie API**
+https://www.programmableweb.com/
 https://www.rabbitmq.com/
-</p>
+
 <p align="center">
   <img width="400" height="100%" src="/Materiale_di_Riferimento/docker_image.png">
 </p>
