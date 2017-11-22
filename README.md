@@ -1,3 +1,5 @@
+<img src="/Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" align="right" height="96" width="96"/>
+
 # **PROGETTO RETI DI CALCOLATORI**
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
@@ -71,6 +73,7 @@ https://developers.google.com/google-apps/calendar/create-events
 
 **Oauth**
 https://developers.google.com/identity/protocols/OAuth2WebServer#redirectingprev
+
 https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
 
 **Varie API**
