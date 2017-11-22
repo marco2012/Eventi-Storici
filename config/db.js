@@ -31,7 +31,7 @@ exports.save(doc, callback) {
 //In caso di successo nella ricerca restituisce callback(null, doc), altrimenti restituisce callback(err, doc) dove
 //err indica la natura dell'errore.
 exports.fetch(date, callback) {
-    var query_string = "?key=%22" + date.replace(/ /g, "+") + "%22"
+    var query_string = "?key=%22" + date.replace(/\/g, "+") + "%22" //inserito /
     request.get({
         url: view_url + query_string
     }, function(err, res, body) {
