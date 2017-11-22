@@ -1,4 +1,6 @@
+<p align="center">
 # **PROGETTO RETI DI CALCOLATORI**
+</p>
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
@@ -70,6 +72,10 @@ https://console.developers.google.com/
 
 **Google calendar**
 https://developers.google.com/google-apps/calendar/create-events
+
+**Oauth**
+https://developers.google.com/identity/protocols/OAuth2WebServer#redirecting
+https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
 
 **Varie API**
 https://www.programmableweb.com/
