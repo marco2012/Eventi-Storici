@@ -4,9 +4,7 @@
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
-
-Tra 3 e 5 (in casi eccezzionali si può violare questo vincolo).
-Più è numeroso il gruppo più deve essere sostanzioso il progetto
+5
 
 ## **Requisiti**
 - [ ] Il servizio REST implementato deve interfacciare almeno due servizi REST *esterni*, cioè non su localhost
@@ -23,38 +21,36 @@ Per installare le dipendenze basta eseguire `npm install`, verranno lette dal fi
 
 ## **Descrizione**
 
-Il progetto utilizza le API fornite da http://history.muffinlabs.com/ per prendere tutti gli eventi storici avvenuti in un giorno particolare.
+Il progetto utilizza le API fornite da http://history.muffinlabs.com/ per prendere tutti gli evevnti storici avvenuti in un giorno particolare.
 
-Una volta ottenuti gli eventi storici relativi alla data, l'applicazione si connette tramite oauth a Google Drive e crea un file contenente una lista di eventi con i link alla relativa pagina wikipedia (e se c'è tempo anche i link di video presi da youtube).
+Una volta ottenuti gli eventi storici relativi alla data, l'applicazione si connette tramite outh a Google Drive e crea un file contenente una lista di eventi con i link alla relativa pagina wikipedia (e se c'è tempo anche i link di video presi da youtube).
 
-Oltre all'operazione di scrittura sul Drive, gli eventi vengono salvati su CouchDB attraverso Working queue fornite da RabbitMQ.
+Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su CouchDB attraverso Working queue fornita da RabbitMQ.
 
-## **Compiti (Provvisori)**
+
+## **Compiti *Provvisori***
 
 ### Marco:
-1. [ ] Autenticazione a Google Drive tramite Oauth
+- [x] Autenticazione a Google Drive tramite Oauth
 
 ### Francesca
-2. [ ] Creazione di un file sul drive
-3. [ ] Scrittura degli eventi sul file Google Drive
+- [ ] Creazione di un file sul drive
+- [ ] Scrittura degli eventi sul file Google Drive
 
 ### Francesco
-<<<<<<< HEAD
-3. [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
-
-=======
 - [ ] Reperimento dei dati da http://history.muffinlabs.com/date/2/14 e salvataggio in variabili
->>>>>>> 2893da52a6ab8715767934f49831ab86e7244d3c
 
 ### Aldo
-4. [ ] Reperimento dei link ai video storici tramite youtube
+- [ ] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
+- [x] Pagina iniziale in HTMl
 
 ### Giuseppe
-7. [ ] Scrittura dei dati dei CouchDB
+- [ ] Scrittura dei dati dei CouchDB
 
 ### Gruppo
-?. WebSocket
-6. [ ] Creazione del processo scrittore tramite RabbitMQ
+- [ ] WebSocket
+- [ ] RabbitMQ
+
 
 ## **Cose utili**
 
@@ -69,21 +65,17 @@ https://rogerdudler.github.io/git-guide/index.it.html
 email: dockervrun@gmail.com
 pass:  behdaicapolavoro
 ```
-
 **Google API**
 https://console.developers.google.com/
 
 **Google calendar**
 https://developers.google.com/google-apps/calendar/create-events
 
-<<<<<<< HEAD
-=======
 **Oauth**
 https://developers.google.com/identity/protocols/OAuth2WebServer#redirectingprev
 
 https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
 
->>>>>>> 2893da52a6ab8715767934f49831ab86e7244d3c
 **Varie API**
 https://www.programmableweb.com/
 https://www.rabbitmq.com/
