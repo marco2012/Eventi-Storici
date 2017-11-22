@@ -1,12 +1,8 @@
-<p align="center">
 # **PROGETTO RETI DI CALCOLATORI**
-</p>
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
-
-Tra 3 e 5 (in casi eccezzionali si può violare questo vincolo).
-Più è numeroso il gruppo più deve essere sostanzioso il progetto
+5
 
 ## **Requisiti**
 - [ ] Il servizio REST implementato deve interfacciare almeno due servizi REST *esterni*, cioè non su localhost
@@ -33,7 +29,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 ## **Compiti *Provvisori***
 
 ### Marco:
-- [ ] Autenticazione a Google Drive tramite Oauth
+- [x] Autenticazione a Google Drive tramite Oauth
 
 ### Francesca
 - [ ] Creazione di un file sul drive
@@ -74,7 +70,7 @@ https://console.developers.google.com/
 https://developers.google.com/google-apps/calendar/create-events
 
 **Oauth**
-https://developers.google.com/identity/protocols/OAuth2WebServer#redirecting
+https://developers.google.com/identity/protocols/OAuth2WebServer#redirectingprev
 https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
 
 **Varie API**
