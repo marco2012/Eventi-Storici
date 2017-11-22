@@ -4,7 +4,8 @@ var router = express.Router()
 var data = require("../models/date")
 
 router.get("/", function(req, res) {
-    var date = req.split("/")[]
+  // var p = http.get("http://www.google.com/22/33").path
+    var d = req.path
     data.insert("Hello World", function(err, doc) {
         console.log(doc)
     })
