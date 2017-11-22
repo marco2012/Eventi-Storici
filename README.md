@@ -1,4 +1,4 @@
-<img src="/Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" align="right" height="96" width="96"/>
+<img src="/Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" align="right" height="50" width=""/>
 
 # **PROGETTO RETI DI CALCOLATORI**
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
