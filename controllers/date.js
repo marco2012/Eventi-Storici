@@ -1,7 +1,7 @@
 
 var express = require("express")
 var router = express.Router()
-var data = require("../models/date")
+var date = require("../models/date")
 
 router.get("/", function(req, res) {
     var date = (req.path.split("/"))[1].replace(/-/, " ")  //è piu comodo scrivere la data in formato <Mese>-<Giorno>
