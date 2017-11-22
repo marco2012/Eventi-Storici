@@ -13,7 +13,7 @@ exports.insert(doc, callback) {
     })
 }
 
-//Metodo che preso in input una stringa indicante la data da ricercare in formato "<Month> <Day>" esegue una ricerca
+//Metodo che preso in input una stringa indicante la data da ricercare in formato "<Month>/<Day>" esegue una ricerca
 //del relativo record all'interno del database.
 //In caso di successo nella ricerca restituisce callback(null, doc), altrimenti restituisce callback(err, doc) dove
 //err indica la natura dell'errore.
@@ -23,4 +23,3 @@ exports.search(date, callback) {
         else callback(null, doc)
     })
 }
-
