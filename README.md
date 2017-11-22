@@ -36,7 +36,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 - [ ] Scrittura degli eventi sul file Google Drive
 
 ### Francesco
-- [ ] Reperimento dei dati da http://history.muffinlabs.com/date/
+- [ ] Reperimento dei dati da http://history.muffinlabs.com/date/2/14 e salvataggio in variabili
 
 ### Aldo
 - [ ] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
