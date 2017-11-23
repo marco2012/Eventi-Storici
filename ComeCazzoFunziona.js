@@ -16,18 +16,5 @@ request.get(options, function callback(error, response, body) {
     for(var i = 0; i < info.data.Events.length; i++){
       console.log(info.data.Events[i]);
     }
-    /*console.log("###############################");
-    //console.log(anno);
-    console.log("###############################");
-    //console.log(testo);
-    console.log("###############################");
-    //console.log(cod);
-    console.log("###############################");
-    //console.log(coll);
-    console.log("###############################");
-    console.log();
-    console.log("###############################");
-  }
-  */
   }
 });
