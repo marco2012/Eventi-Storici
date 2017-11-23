@@ -1,19 +1,14 @@
 
 var express = require("express")
-var router = express.Router()
-var date = require("../models/date")
+var date_mw = require("../middlewares/date")
 
-router.get("/", function(req, res) {
-    var tmp = req.path.split("/")               //è piu comodo scrivere la data in formato <Mese>/<Giorno>
-    var date = tmp[2] + tmp[3]
-    date.search(date, function(err, doc){
-        if (err == -1) {
-            //chiamata all'api che ci fornisce il documento
-            //chiamata allo scrittore tramite rabbitMQ
-            //Scrittura sul drive del file
-        }
-        else if (err == null) {
-            //Scrittura sul drive del file, gia presente nel database
-        }
+var router = express.Router()
+
+router.get("/", (req, res) => {
+    //Qui va inserita la logica del controller
+    //All'arrivo della get viene passato il controllo al middleware che si occupa del Reperimento dei dati
+    //Quindi prima l'interrogazione del database e in caso la chiamata all'API muffinlabs(Francesco)
+    //Parte il middleware che si occupa dell'autenticazione Oauth(Marco).
+    //In seguito viene chiamato un altro middleware che si occupa della gestione del file su Google drive(
+    //La parte di Aldo e Francesca rispettivamente per scrittura del file e API youtube)
     })
-})

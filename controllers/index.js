@@ -5,6 +5,6 @@ var express = require("express"),
 
 var router = express.Router()
 
-router.use("/date_search", require("./date"))
+router.use("/date", require("./date"))
 
 module.exports = router
