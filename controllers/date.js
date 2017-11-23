@@ -4,7 +4,8 @@ var router = express.Router()
 var date = require("../models/date")
 
 router.get("/", function(req, res) {
-    var date = (req.path.split("/"))[1].replace(/-/, " ")  //è piu comodo scrivere la data in formato <Mese>-<Giorno>
+    var tmp = req.path.split("/")               //è piu comodo scrivere la data in formato <Mese>/<Giorno>
+    var date = tmp[2] + tmp[3]
     date.search(date, function(err, doc){
         if (err == -1) {
             //chiamata all'api che ci fornisce il documento
