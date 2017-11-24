@@ -12,7 +12,7 @@
   window.onload = function(){
     var x=0;
     //var echo_service = new WebSocket('ws://echo.websocket.org');
-    var echo_service = new WebSocket('ws://echo.websocket.org');
+    var echo_service = new WebSocket('ws://localhost:8080');
 
     echo_service.onmessage = function(event){
       append("messaggio ricevuto")
