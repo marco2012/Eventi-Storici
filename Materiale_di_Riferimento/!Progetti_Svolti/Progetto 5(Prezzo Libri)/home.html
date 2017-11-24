@@ -1,0 +1,226 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+        <style>
+            .modalDialog {
+                position: fixed;
+                font-family: Arial, Helvetica, sans-serif;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0,0,0,0.8);
+                z-index: 99999;
+                opacity: 0;
+                -webkit-transition: opacity 400ms ease-in;
+                -moz-transition: opacity 400ms ease-in;
+                transition: opacity 400ms ease-in;
+                pointer-events: none;
+            }
+
+                .modalDialog:target {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+
+                .modalDialog > div {
+                    width: 400px;
+                    position: relative;
+                    margin: 10% auto;
+                    padding: 5px 20px 13px 20px;
+                    border-radius: 10px;
+                    background: #fff;
+                    background: -moz-linear-gradient(#fff, #999);
+                    background: -webkit-linear-gradient(#fff, #999);
+                    background: -o-linear-gradient(#fff, #999);
+                }
+
+            .close2 {
+                background: #606061;
+                color: #FFFFFF;
+                line-height: 25px;
+                position: absolute;
+                right: -12px;
+                text-align: center;
+                top: -10px;
+                width: 24px;
+                text-decoration: none;
+                font-weight: bold;
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                border-radius: 12px;
+                -moz-box-shadow: 1px 1px 3px #000;
+                -webkit-box-shadow: 1px 1px 3px #000;
+                box-shadow: 1px 1px 3px #000;
+            }
+
+                .close2:hover {
+                    background: #00d9ff;
+                }
+        </style>
+
+
+        
+		<title>SmartBooks</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/phantom/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+    <script>
+        function initialize() {
+            var input = document.getElementById('IP');
+            new google.maps.places.Autocomplete(input);
+        }
+        function loadScript()
+            {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyArMS1eIIVinhvrGRQE9efZKW5mxnWFO84&libraries=places&sensor=false&callback=initialize";
+                document.body.appendChild(script);
+            }
+            window.onload = loadScript;
+    </script>
+    
+       
+   
+	<body>
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+
+                    <!-- Logo -->
+                    <a href="{{ url_for('home') }}" class="logo">
+                        <span class="symbol"><img src="/static/phantom/images/logo.svg" alt="" /></span><span class="title">SmartBooks</span>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>{{ user }}</h2>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    
+                    <li>
+                        
+                        <a href="#openMessaggi" style="color:{{colore}}">Messaggi</a>
+
+                    </li>
+                    <li><a href="{{ url_for('APII') }}">API</a></li>
+                    <li><a href="{{ url_for('chisiamo') }}">Chi siamo</a></li>
+                    <li><a href="{{url_for('logout')}}">Logout</a></li>
+                </ul>
+            </nav>
+            <div id="openMessaggi" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close2">X</a>
+                    <h2>Messaggio</h2>
+                    <p>{{messaggio}}.</p>
+                    <p>Grazie per aver usato il nostro servizio!</p>
+                </div>
+            </div>
+            
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <header>
+                        <h1>
+                            Questo è SmartBooks, cerca, compra <br />
+                            e risparmia!
+                        </h1>
+                        <p>Puoi cercare migliaia di libri ricevendo informazioni dettagliate su dove trovarli e come risparmiare. Per iniziare la ricerca compila i campi sottostanti.</p>
+                    </header>
+                    <form method="post" action="/result">
+                        <div class="row uniform">
+                            <div class="field">
+                                <input type="text" name="Libro" id="L" placeholder="Libro da cercare (es. Siddharta)" required />
+                            </div>
+                            <div class="field">
+                                <input type="text" name="Indirizzo" id="IP" placeholder="Partenza (es. Via Aldo Moro 31, RM )" required />
+                            </div>
+                            <div class="4u 12u$(small)">
+                                <input type="radio" id="Macchina" name="viaggio" value="DRIVING" checked>
+                                <label for="Macchina">In macchina</label>
+                            </div>
+                            <div class="4u 12u$(small)">
+                                <input type="radio" id="Piedi" name="viaggio" value="WALKING">
+                                <label for="Piedi">A piedi</label>
+                            </div>
+                            <div class="4u$ 12u$(small)">
+                                <input type="radio" id="Mezzi" name="viaggio" value="TRANSIT">
+                                <label for="Mezzi">Con i mezzi</label>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Cerca" class="special" /></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <section>
+                        <h2>Contattaci</h2>
+                        <form method="post" action="mailto:simo.pelo94@gmail.com" enctype="text/plain">
+                            <div class="field half first">
+                                <input type="text" name="name" id="name" placeholder="Nome" required />
+                            </div>
+                            <div class="field half">
+                                <input type="email" name="email" id="email" placeholder="Email" required />
+                            </div>
+                            <div class="field">
+                                <textarea name="message" id="message" placeholder="Messaggio" required></textarea>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Invia" class="special" /></li>
+                            </ul>
+                        </form>
+
+                    </section>
+                    <section>
+                        <h2>Follow</h2>
+                        <ul class="icons">
+                            <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+                            <li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+                            <li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+                            <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
+                    <ul class="copyright">
+                        <li>&copy; SmartBooks. All rights reserved</li>
+                        <li>Simone Pelosi e Lorenzo Patrizi</li>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+
+		<!-- Scripts -->
+			<script src="/static/phantom/assets/js/jquery.min.js"></script>
+			<script src="/static/phantom/assets/js/skel.min.js"></script>
+			<script src="/static/phantom/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/static/phantom/assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/phantom/assets/js/main.js"></script>
+
+	</body>
+</html>

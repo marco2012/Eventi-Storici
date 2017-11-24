@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Smartphone Finder</title>
+			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> 
+			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+		<style>
+			body {padding-top:0px;}
+		</style>
+	</head>
+	<body>
+			<div class="jumbotron text-center">
+				<div class="container">
+					<h1><%=model%></h1>
+					<div class="row">
+						<div class="col-sm-3">
+							<img align="left" src="<%=img_url%>" class="img-rounded" alt="" style="width:250px; height:auto;">
+						</div>
+						<div class="col-sm-9" style="background-color:#ffbf80;border-radius: 25px;position:relative;">
+							<label>Cpu : <%=cpu%></label></br>
+							<label>Memoria interna : <%=storage%></label></br>
+							<label>Memoria esterna : <%=removable%></label></br>
+							<label>Ram : <%=ram%></label></br>
+							<label>Sistema operativo : <%=os%></label></br>
+							<label>Dimensioni : <%=l%> x <%=h%> x <%=w%> mm</label></br>
+							<label>Peso : <%=weight%>g</label></br>
+							<label>Batteria : <%=battery%></label></br>
+							<label>Display : <%=display%></label></br>
+							<label>Fotocamera : Posteriore:<%=rear%>MP Frontale:<%=front%>MP</label>
+						</div>
+						<hr>
+						<p>Cerca un altro smartphone <a href="/search">Search.</a></p>
+						<p>Oppure torna alla <a href="/">Home</a>.</p>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>

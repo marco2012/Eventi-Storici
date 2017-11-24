@@ -1,0 +1,105 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>SmartBooks</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/static/phantom/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="/static/phantom/images/logo.svg" alt="" /></span><span class="title">SmartBooks</span>
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>{{user}}</h2>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('APII') }}">API</a></li>
+                <li><a href="{{ url_for('chisiamo') }}">Chi siamo</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <section>
+                    <h1>SmartBooks APIs per gli sviluppatori</h1>
+
+                    <!-- Text -->
+                    <p>
+                        Le nostre APIs sono destinate a sviluppatori esterni che vogliono integrare il nostro servizio nelle loro applicazioni.
+                        Comprendono, per il momento, di due GET. Per gli spazi usare il carattere speciale "-_-" ad esempio: "I-_-Malavoglia"
+                    </p>
+                    <h2>API SmartLibro</h2>
+                    <p>Questa API restituisce nel formato json il libro cercato con relativo prezzo di Amazon e la media del prezzo delle librerie. </p>
+                    <h4>Da terminale: </h4>
+                    <pre><code>curl http://mypythonapp-librosmart.rhcloud.com/smartlibro/nomelibrodacercare </code></pre>
+                    <br />
+                    <h4>Da Python inserendo "from requests import get":</h4>
+                    <pre><code>get('http://mypythonapp-librosmart.rhcloud.com/smartlibro/nomelibrodacercare').json()</code></pre>
+                    <h2>API SmartLibrerie</h2>
+                    <p>Questa API restituisce nel formato json tutte le librerie nel raggio di 50km rispetto alla posizione della ricerca, includendo latitudine e longitudine.</p>
+                    <h4>Da terminale: </h4>
+                    <pre><code>curl http://mypythonapp-librosmart.rhcloud.com/smartlibrerie/viaincuicercare,città 
+                        </code></pre>
+                    <br />
+                    <h4>Da Python inserendo "from requests import get":</h4>
+                    <pre><code>get('http://mypythonapp-librosmart.rhcloud.com/smartlibro/viaincuicercare,città').json()</code></pre>
+                    <h2>Esempi d'uso</h2>
+                    <pre><code>$ curl http://mypythonapp-librosmart.rhcloud.com/smartlibrerie/via-_-forestella,Pofi
+{"Mondadori Bookstore - Libreria Mondadori Formia": {"lat": 41.2570425, "lng": 13.6095321}, "Libreria Mondadori Di Felice Paparello": {"lat": 41.3584126, "lng": 13.4278824}, "Anacleto Libreria": {"lat": 41.59444, "lng": 12.824422}, "Libreria Universitas": {"lat": 41.7170715, "lng": 13.6116341}, "Mondadori Bookstore - Libreria Mondadori Cassino": {"lat": 41.4906499, "lng": 13.8343089}, "Giunti al Punto Librerie": {"lat": 41.7619569, "lng": 12.9580995}, "Libreria Gerini Bruno": {"lat": 41.492857, "lng": 13.82663}, "Libreria Incontro S.A.S. Di Guizzaro Paola & C.": {"lat": 41.45893969999999, "lng": 12.9247143}, "La Feltrinelli": {"lat": 41.4667781, "lng": 12.9043262}, "Libreria Punto Scuola Sas Di Pennese Aurelio & C.": {"lat": 41.7258377, "lng": 13.0111942}, "Libreria Tivoli Giuseppe Gurgone": {"lat": 41.95952980000001, "lng": 12.7998717}, "Mondadori Bookstore - Libreria Mondadori Fondi": {"lat": 41.3584126, "lng": 13.4278824}, "Libreria La Mia Libreria Di Marco Coluzzi": {"lat": 41.4660457, "lng": 12.9055797}, "Libreria San Graal": {"lat": 41.7260948, "lng": 13.003315}, "Libreria Universitaria": {"lat": 41.491386, "lng": 13.8367369}, "Voland Libreria Di Donatelli Davide": {"lat": 41.592194, "lng": 12.8275393}, "libreria catena": {"lat": 41.72667850000001, "lng": 13.007077}}
+
+$ curl http://mypythonapp-librosmart.rhcloud.com/smartlibro/I-_-Malavoglia
+{"Amazon": {"I Malavoglia. Ediz. integrale": "3.32"}, "Libreria": {"I Malavoglia. Ediz. integrale": "3.9"}}
+ </code></pre>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>&copy; SmartBooks. All rights reserved</li>
+                    <li>Simone Pelosi e Lorenzo Patrizi</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/phantom/assets/js/jquery.min.js"></script>
+    <script src="/static/phantom/assets/js/skel.min.js"></script>
+    <script src="/static/phantom/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/static/phantom/assets/js/main.js"></script>
+
+</body>
+</html>

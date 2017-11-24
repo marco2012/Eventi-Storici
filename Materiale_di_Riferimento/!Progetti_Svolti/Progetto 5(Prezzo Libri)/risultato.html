@@ -1,0 +1,370 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+        <style>
+            .modalDialog {
+                position: fixed;
+                font-family: Arial, Helvetica, sans-serif;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0,0,0,0.8);
+                z-index: 99999;
+                opacity: 0;
+                -webkit-transition: opacity 400ms ease-in;
+                -moz-transition: opacity 400ms ease-in;
+                transition: opacity 400ms ease-in;
+                pointer-events: none;
+            }
+
+                .modalDialog:target {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+
+                .modalDialog > div {
+                    width: 400px;
+                    position: relative;
+                    margin: 10% auto;
+                    padding: 5px 20px 13px 20px;
+                    border-radius: 10px;
+                    background: #fff;
+                    background: -moz-linear-gradient(#fff, #999);
+                    background: -webkit-linear-gradient(#fff, #999);
+                    background: -o-linear-gradient(#fff, #999);
+                }
+
+            .close2 {
+                background: #606061;
+                color: #FFFFFF;
+                line-height: 25px;
+                position: absolute;
+                right: -12px;
+                text-align: center;
+                top: -10px;
+                width: 24px;
+                text-decoration: none;
+                font-weight: bold;
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                border-radius: 12px;
+                -moz-box-shadow: 1px 1px 3px #000;
+                -webkit-box-shadow: 1px 1px 3px #000;
+                box-shadow: 1px 1px 3px #000;
+            }
+
+                .close2:hover {
+                    background: #00d9ff;
+                }
+        </style>
+		<title>SmartBooks</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/static/phantom/assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/phantom/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/phantom/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/phantom/assets/css/ie8.css" /><![endif]-->
+        
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #map_container{
+                position: relative;
+                padding-bottom: 90%;
+                height: 0;
+                overflow: hidden;
+            }
+            #map{
+                width: 100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                position: absolute;
+            }
+
+            @media print {
+                #map {
+                    height: 500px;
+                    margin: 0;
+                }
+
+                #right-panel {
+                    float: none;
+                    width: auto;
+                }
+            }
+        </style>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
+        <script>
+            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+            var icons = {
+                library: {
+                    icon: iconBase + 'library_maps.png'
+                }
+            };
+            var map;
+            var directionsService;
+            var directionsDisplay;
+            var origlat, origlng;
+            var destlat, destlng;
+            const costomedio = 0.142;
+            function initialize()
+            {
+                
+                directionsService = new google.maps.DirectionsService;
+                directionsDisplay = new google.maps.DirectionsRenderer;
+                map =new google.maps.Map(document.getElementById('map'), {
+                    center: new google.maps.LatLng(51.508742, -0.120850),
+                    zoom: 15,
+                });
+
+               
+
+                var center;
+                var geocoder=new google.maps.Geocoder();
+                geocoder.geocode({'address': document.getElementById("address").title}, function(results, status) {
+                    if (status === google.maps.GeocoderStatus.OK) {
+                        center = results[0].geometry.location;
+                        origlat = results[0].geometry.location.lat();
+                        origlng = results[0].geometry.location.lng();
+                        map.setCenter(center);
+                            var marker = new google.maps.Marker({
+                            map: map,
+                            position: center,
+                            animation: google.maps.Animation.DROP,
+                        }); 
+                        
+                    } else {
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    }
+                });
+
+                //Resize Function
+                google.maps.event.addDomListener(window, "resize", function () {
+                    var center = map.getCenter();
+                    google.maps.event.trigger(map, "resize");
+                    map.setCenter(center);
+                });
+            
+                window.setTimeout(function () {
+                    directionsDisplay = new google.maps.DirectionsRenderer({ map: map });
+                    
+                    directionsDisplay.setPanel(document.getElementById('right-panel'));
+                    infowindow = new google.maps.InfoWindow();
+                    var service = new google.maps.places.PlacesService(map);
+                    
+                    service.nearbySearch({
+                        location: center,
+                        radius: 50000,
+                        keyword: 'libreria'
+
+                    }, callback);
+
+                    service.nearbySearch({
+                        location: center,
+                        radius: 50000,
+                        type: ['book_store']
+
+                    }, callback);
+                    
+                },1000);
+            }
+
+            function callback(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    
+                    for (var i = 0; i < results.length; i++) {
+                        createMarker(results[i]);
+                        
+                    }
+                }
+            }
+
+            function createMarker(place) {
+                
+                var placeLoc = place.geometry.location;
+                
+                
+                var marker = new google.maps.Marker({
+                    position: place.geometry.location,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    icon: icons['library'].icon
+                });
+                
+                google.maps.event.addListener(marker, 'click', function () {
+                    destlat = place.geometry.location.lat();
+                    destlng = place.geometry.location.lng();
+                    calculateAndDisplayRoute(directionsService, directionsDisplay);
+                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+          'Rating ' + place.rating + '</div>');
+                    infowindow.open(map, this);
+                });
+            }
+            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                start = new google.maps.LatLng(origlat, origlng);
+                end = new google.maps.LatLng(destlat, destlng);
+                var request = {
+                    origin: start,
+                    destination: end,
+                    travelMode: google.maps.TravelMode[document.getElementById('viaggio').title],
+                    unitSystem: google.maps.UnitSystem.METRIC
+
+                };
+                
+                directionsService.route(request, function (response, status) {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        var costolibro=parseFloat(document.getElementById("prezzoLib").innerHTML);
+                        
+                        if (document.getElementById('viaggio').title == "DRIVING") {
+                            var costototale = (response.routes[0].legs[0].distance.value / 1000 * costomedio)
+                            + costolibro;
+                            document.getElementById("dinamico").innerHTML = "Costo totale ( libro + stima carburante ): " + "<u>" + costototale.toFixed(2) + "</u> € ";
+                            
+                            if (costototale < parseFloat(document.getElementById("prezzoAmazon").innerHTML)) {
+                                
+                                document.getElementById("dinamico").innerHTML += "<p> Recarsi in libreria è la scelta più conveniente. </p>"
+                            }
+                            else if (costototale >= parseFloat(document.getElementById("prezzoAmazon").innerHTML)) {
+                                
+                                document.getElementById("dinamico").innerHTML += "<p> Comprandolo su Amazon risparmieresti: " + (costototale - parseFloat(document.getElementById("prezzoAmazon").innerHTML)).toFixed(2) + "€ </p>";
+                            }
+                        }
+                        else if (document.getElementById('viaggio').title == "WALKING") {
+                            if (costolibro < parseFloat(document.getElementById("prezzoAmazon").innerHTML)) {
+                                document.getElementById("dinamico").innerHTML = "Fare una passeggiata in libreria è la scelta più conveniente."
+                            }
+                            else{
+                                document.getElementById("dinamico").innerHTML = "Comprarlo su Amazon è la scelta più conveniente."
+                            }
+                        }
+                        else if (document.getElementById('viaggio').title == "TRANSIT") {
+                            document.getElementById("dinamico").innerHTML = "In mancanza di un abbonamento il viaggio con i mezzi potrebbe avere costi aggiuntivi."
+                        }
+
+                        directionsDisplay.setDirections(response);
+                    } else {
+                        window.alert('Impossibile stabilire il percorso con il metodo di spostamento scelto!');
+                    }
+                });
+                
+            }
+            function loadScript()
+            {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyArMS1eIIVinhvrGRQE9efZKW5mxnWFO84&libraries=places&sensor=false&callback=initialize";
+                document.body.appendChild(script);
+            }
+            window.onload = loadScript;
+        </script>
+	</head>
+	<body>
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <span class="symbol"><img src="/static/phantom/images/logo.svg" alt="" /></span><span class="title">SmartBooks</span>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>{{ user }}</h2>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li>
+                        <a href="#openMessaggi" style="color:{{colore}}">Messaggi</a>
+
+                    </li>
+                    <li><a href="{{ url_for('APII') }}">API</a></li>
+                    <li><a href="{{ url_for('chisiamo') }}">Chi siamo</a></li>
+                    <li><a href="{{url_for('logout')}}">Logout</a></li>
+                </ul>
+            </nav>
+            <div id="openMessaggi" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close2">X</a>
+                    <h2>Messaggio</h2>
+                    <p>{{messaggio}}.</p>
+                    <p>Grazie per aver usato il nostro servizio!</p>
+                </div>
+            </div>
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <h1>{{ lib }} trovato!</h1>
+                    <h2> Prezzo su Amazon: <a href="{{link}}"> {{trovato}} <u id="prezzoAmazon">{{ prezzo }}</u> € </a> </h2>
+                    <h2> Prezzo medio in libreria: {{trovatoLib}} <u id="prezzoLib">{{ prezzoOf }}</u> €</h2>
+                    <p id="dinamico">Seleziona una libreria sulla mappa per una stima dei costi.</p>
+                    <ul class="actions">
+                        <li>
+                            <form method="get" action="/message" id="messaggi">
+                                <input type="submit" value="nuova ricerca" />
+                            </form>
+                        </li>
+                    </ul>
+                    <h2 id="address" title="{{ind}}"></h2>
+                    <h2 id="viaggio" title="{{viaggio}}"></h2>
+
+
+                    <div id="map_container">
+
+                        <div id="map"></div>
+                    </div>
+                    <div id="right-panel"></div>
+
+                </div>
+
+
+
+
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <ul class="copyright">
+                        <li>&copy; SmartBooks. All rights reserved</li>
+                        <li>Simone Pelosi e Lorenzo Patrizi</li>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+
+		<!-- Scripts -->
+			<script src="/static/phantom/assets/js/jquery.min.js"></script>
+			<script src="/static/phantom/assets/js/skel.min.js"></script>
+			<script src="/static/phantom/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/phantom/assets/js/main.js"></script>
+
+	</body>
+</html>
