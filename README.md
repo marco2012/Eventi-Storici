@@ -43,7 +43,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 - [x] Reperimento dei dati da http://history.muffinlabs.com/date/2/14 e salvataggio in variabili
 
 ### Aldo
-- [ ] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
+- [x] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
 - [x] Pagina iniziale in HTMl
 
 ### Giuseppe
