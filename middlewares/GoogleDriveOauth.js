@@ -20,7 +20,7 @@ var listFiles = "https://www.googleapis.com/drive/v3/files";                 //L
 
 var oauthlink = "https://accounts.google.com/o/oauth2/auth?client_id="+client_id+"&response_type=code&redirect_uri="+redirect_uri+"&scope="+scope+"&access_type=online";
 
-exports.getAccess = function(callback){
+// exports.getAccess = function(callback){
 
 app.get("/", function(req,res){                                             //redirect per la gestione del grant dei permessi (authorization request phase)
   res.redirect(oauthlink);
@@ -30,7 +30,7 @@ app.get("/oauth2callback", function(req,res){
 
   //controllo errori
   if (req.query.error){                                                   //gestione errori(accesso negato)
-    var errorHtml= path.resolve("./"+"/error.html");                    //restituisce il percorso completo di error.html presente nella stessa cartella
+    var errorHtml= path.resolve("../"+"/html/error.html");                    //restituisce il percorso completo di error.html presente nella stessa cartella
     res.writeHead(200, {"Content-Type": "text/html"});
     fs.createReadStream(errorHtml).pipe(res);
     console.log("\t"+"Access denied!!");                                //debug
@@ -62,7 +62,7 @@ app.get("/oauth2callback", function(req,res){
     console.log("\t"+"Access Token obtained: "+accessToken); 	        //debug
 
 
-    var successHtml= path.resolve("./"+"/success.html");              //apro un file html con l'esito positivo dell'autenticazone
+    var successHtml= path.resolve("../"+"/html/success.html");              //apro un file html con l'esito positivo dell'autenticazone
     res.writeHead(200, {"Content-Type": "text/html"});
     fs.createReadStream(successHtml).pipe(res);
 
@@ -78,4 +78,4 @@ app.listen(port, hostname, function(){
   console.log("Server running at: "+hostname+":"+port+"\n");
 });
 
-};
+// };
