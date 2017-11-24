@@ -12,6 +12,7 @@ youTube.search(query, 2, function(error, result) {
   if (error) console.log(error);
   else {
     var body = JSON.stringify(result, null, 2)
-    
+    var link = body.match(/"videoId": "(/\w)"/gi)
+    console.log(link)
   }
 });
