@@ -1,10 +1,11 @@
 var request = require('request');
 
-var options = {
-  url: 'http://history.muffinlabs.com/date/2/14'
-}
+var express  = require('express');
+var app      = express();
 
-request.get(options, function callback(error, response, body) {
+var url = 'http://history.muffinlabs.com/date/2/14'
+
+request.get(url, function(error, response, body) {
   if (!error && response.statusCode == 200) {
     var info = JSON.parse(body);
 

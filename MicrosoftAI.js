@@ -19,6 +19,7 @@ var options = {
 request(options, function (error, response, body) {
   if (!error && response.statusCode == 200) {
     // console.log(body)
+    
     // Queste funzionano solo con Description come visualFeature
     var tags = body.description.tags
     var descrizione = body.description.captions[0].text
