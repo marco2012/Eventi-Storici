@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>particles.js</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="particles/style.css">
-  <script type="text/javascript" language="javascript">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Docker ti amo!</title>
+
+    <style>
+      h1 {font-family: monospace; text-align:center;}
+      h3 {font-family: helvetica; text-align:center;}
+    </style>
+
+    <script type="text/javascript" language="javascript">
 
       function validaGiorno() {
         var giorno = parseInt(document.eseform.giorno.value);
@@ -26,11 +30,14 @@
       function validaForm() {
         var giorno = parseInt(document.eseform.giorno.value);
         var mese = document.eseform.mese.value;
+        if(mese=="nessuno"){
+          alert('inserire il mese');
+          return false;
+        }
         if(mese=="aprile"&&giorno==31){
           alert("data non valida");
           return false;
         }
-        if(mese=="aprile"&&giorno==31) return false;
         var numero_mese=0;
         switch (mese) {
           case "gennaio":
@@ -79,33 +86,27 @@
 
       function dataOggi() {
         var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1; //January is 0!
-        // if(dd<10){
-        //     dd='0'+dd;
-        // }
-        // if(mm<10){
-        //     mm='0'+mm;
-        // }
-        var data = mm+'/'+dd;
+      	var dd = today.getDate();
+      	var mm = today.getMonth()+1; //January is 0!
+      	// if(dd<10){
+      	//     dd='0'+dd;
+      	// }
+      	// if(mm<10){
+      	//     mm='0'+mm;
+      	// }
+      	var data = mm+'/'+dd;
         location.href = 'http://history.muffinlabs.com/date/'+data;
         return true;
       }
       //action="http://history.muffinlabs.com/"
     </script>
-</head>
-<body>
 
-<!-- particles.js container -->
-<div id="particles-js">
-
-  <div align="center">
-    <br><br>
+  </head>
+  <body bgcolor="#0db7ed">
+    <div align="center">
       <form name="eseform" action="">
         <h1>Docker forever</h1>
-        <br>
         <h3>Inserisci la data da cercare</h3>
-        <br>
         Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
         <!-- <br><br> -->
         Mese: <select name="mese">
@@ -128,14 +129,7 @@
       <input type="button" name="Oggi" value="Eventi del giorno" onclick="return dataOggi();">
       </form>
       <br>
-      <img src="../Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" height="65" width=""/>
-  </div>
-
-</div>
-
-<!-- scripts -->
-<script src="particles/particles.js"></script>
-<script src="particles/app.js"></script>
-
-</body>
+      <img src="../Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" height="60" width=""/>
+    </div>
+  </body>
 </html>
