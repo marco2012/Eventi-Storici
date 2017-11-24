@@ -20,7 +20,7 @@ var listFiles = "https://www.googleapis.com/drive/v3/files";                 //L
 
 var oauthlink = "https://accounts.google.com/o/oauth2/auth?client_id="+client_id+"&response_type=code&redirect_uri="+redirect_uri+"&scope="+scope+"&access_type=online";
 
-// exports.getAccess = function(callback){
+exports.getAccess = function(callback){
 
 app.get("/", function(req,res){                                             //redirect per la gestione del grant dei permessi (authorization request phase)
   res.redirect(oauthlink);
@@ -78,4 +78,4 @@ app.listen(port, hostname, function(){
   console.log("Server running at: "+hostname+":"+port+"\n");
 });
 
-// };
+};
