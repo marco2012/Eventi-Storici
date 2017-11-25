@@ -12,6 +12,7 @@ http.createServer(function(request,response){
  });
  }).listen(8080);
 */
+/*
 var http = require("http");
 
 function onRequest(request, response) {
@@ -20,6 +21,15 @@ function onRequest(request, response) {
       response.write("Richiesta ricevuta");
       response.end();
 }
- 
+
 http.createServer(onRequest).listen(8080);
 console.log("Server avviato");
+*/
+var http = require('http');
+
+http.createServer(function(request,response){
+
+ response.writeHead(200);
+ request.pipe(response);
+
+}).listen(8080);

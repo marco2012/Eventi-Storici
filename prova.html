@@ -12,7 +12,7 @@
   window.onload = function(){
     var x=0;
     //var echo_service = new WebSocket('ws://echo.websocket.org');
-    var echo_service = new WebSocket('ws://localhost:8080');
+    var echo_service = new WebSocket('ws://0.0.0.0:8080');
 
     echo_service.onmessage = function(event){
       append("messaggio ricevuto")
@@ -26,6 +26,7 @@
       append("connessione effettuata")
       echo_service.send("hello!");
     }
+
     function mia() {
       echo_service.send("io no pago afito!");
       append("ho inviato un nuovo messaggio!")
