@@ -61,6 +61,8 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 email: dockervrun@gmail.com
 pass:  behdaicapolavoro
 ```
+- [CouchDB Server](https://couchdb-35226b.smileupps.com/_utils/index.html)
+
 - [Guida Git](https://rogerdudler.github.io/git-guide/index.it.html)
 
 - [Google API](https://console.developers.google.com/)
