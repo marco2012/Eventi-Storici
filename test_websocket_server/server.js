@@ -1,9 +1,9 @@
 var http = require("http");
 
 function onRequest(request, response) {
-      console.log("Richiesta ricevuta dal server");
+      console.log("Ho ricevuto una richiesta: "+request);
       response.writeHead(200, {"Content-Type": "text/plain"});
-      response.write("Richiesta ricevuta");
+      response.write("Ho ricevuto la tua richiesta: "+request);
       response.end();
 }
 
