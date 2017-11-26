@@ -23,7 +23,7 @@ Per installare le dipendenze basta eseguire `npm install`, verranno lette dal fi
 
 ## **Descrizione**
 
-Il progetto utilizza le API fornite da http://history.muffinlabs.com/ per prendere tutti gli evevnti storici avvenuti in un giorno particolare.
+Il progetto utilizza le API fornite da http://history.muffinlabs.com/ per prendere tutti gli eventi storici avvenuti in un giorno particolare.
 
 Una volta ottenuti gli eventi storici relativi alla data, l'applicazione si connette tramite outh a Google Drive e crea un file contenente una lista di eventi con i link alla relativa pagina wikipedia (e se c'è tempo anche i link di video presi da youtube).
 
