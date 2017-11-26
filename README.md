@@ -34,20 +34,20 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 
 ### Marco:
 - [x] Autenticazione a Google Drive tramite Oauth
+- [x] Caricamento di un file su Google Drive
 
 ### Francesca
-- [ ] Creazione di un file sul drive
-- [ ] Scrittura degli eventi sul file Google Drive
+- [ ] Scrittura degli eventi in un file
 
 ### Francesco
-- [x] Reperimento dei dati da http://history.muffinlabs.com/date/2/14 e salvataggio in variabili
+- [ ] Reperimento dei dati da http://history.muffinlabs.com/date/2/14 e salvataggio in variabili + link youtube
 
 ### Aldo
-- [x] Reperimento dei link ai video storici tramite youtube (Necessario Oauth)
+- [x] Reperimento dei link ai video storici tramite youtube
 - [x] Pagina iniziale in HTMl
 
 ### Giuseppe
-- [ ] Scrittura dei dati su CouchDB
+- [x] Scrittura dei dati su CouchDB
 
 ### Gruppo
 - [ ] WebSocket
