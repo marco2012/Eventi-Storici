@@ -19,7 +19,7 @@ li{list-style:none}
 
 
 /* =============================================================================
-   My CSS
+   Particles CSS
    ========================================================================== */
 
 /* ---- base ---- */
@@ -55,3 +55,93 @@ canvas{
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+/* =============================================================================
+   Whale CSS
+   ========================================================================== */
+   @-webkit-keyframes move {
+     0% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     25% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     50% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     75% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #1976D2, 50px -30px 0 5px #1976D2;
+     }
+     100% {
+       box-shadow: 30px -20px 0 5px #ededed, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+   }
+   @-moz-keyframes move {
+     0% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     25% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     50% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     75% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #1976D2, 50px -30px 0 5px #1976D2;
+     }
+     100% {
+       box-shadow: 30px -20px 0 5px #ededed, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+   }
+   @-o-keyframes move {
+     0% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     25% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     50% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     75% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #1976D2, 50px -30px 0 5px #1976D2;
+     }
+     100% {
+       box-shadow: 30px -20px 0 5px #ededed, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+   }
+   @keyframes move {
+     0% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     25% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     50% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+     75% {
+       box-shadow: 30px -20px 0 5px #1976D2, 30px -30px 0 5px #1976D2, 20px -40px 0 5px #1976D2, 40px -40px 0 5px #1976D2, 10px -30px 0 5px #1976D2, 50px -30px 0 5px #1976D2;
+     }
+     100% {
+       box-shadow: 30px -20px 0 5px #ededed, 30px -30px 0 5px #ededed, 20px -40px 0 5px #ededed, 40px -40px 0 5px #ededed, 10px -30px 0 5px #ededed, 50px -30px 0 5px #ededed;
+     }
+   }
+   body {
+     background: #ededed;
+   }
+   body .whale {
+     position: absolute;
+     left: 50%;
+     margin-left: -60px;
+     top: 40%;
+     box-shadow: 0px 0 0 5px #212121, 10px 0 0 5px #212121, 20px 0 0 5px #212121, 30px 0 0 5px #212121, 40px 0 0 5px #212121, 50px 0 0 5px #212121, 60px 0 0 5px #212121, -10px 10px 0 5px #212121, 0px 10px 0 5px #64a9ed, 10px 10px 0 5px #64a9ed, 20px 10px 0 5px #64a9ed, 30px 10px 0 5px #64a9ed, 40px 10px 0 5px #64a9ed, 50px 10px 0 5px #64a9ed, 60px 10px 0 5px #64a9ed, 70px 10px 0 5px #212121, 80px 10px 0 5px #212121, -20px 20px 0 5px #212121, -10px 20px 0 5px #64a9ed, 0px 20px 0 5px #64a9ed, 10px 20px 0 5px #1976D2, 20px 20px 0 5px #1976D2, 30px 20px 0 5px #1976D2, 40px 20px 0 5px #1976D2, 50px 20px 0 5px #1976D2, 60px 20px 0 5px #1976D2, 70px 20px 0 5px #64a9ed, 80px 20px 0 5px #64a9ed, 90px 20px 0 5px #212121, -20px 30px 0 5px #212121, -10px 30px 0 5px #64a9ed, 0px 30px 0 5px #1976D2, 10px 30px 0 5px #1976D2, 20px 30px 0 5px #1976D2, 30px 30px 0 5px #1976D2, 40px 30px 0 5px #1976D2, 50px 30px 0 5px #1976D2, 60px 30px 0 5px #1976D2, 70px 30px 0 5px #1976D2, 80px 30px 0 5px #1976D2, 90px 30px 0 5px #64a9ed, 100px 30px 0 5px #212121, 140px 30px 0 5px #212121, 160px 30px 0 5px #212121, -20px 40px 0 5px #212121, -10px 40px 0 5px #64a9ed, 0px 40px 0 5px #1976D2, 10px 40px 0 5px #1976D2, 20px 40px 0 5px white, 30px 40px 0 5px white, 40px 40px 0 5px #1976D2, 50px 40px 0 5px #1976D2, 60px 40px 0 5px #1976D2, 70px 40px 0 5px #1976D2, 80px 40px 0 5px #1976D2, 90px 40px 0 5px #1976D2, 100px 40px 0 5px #212121, 130px 40px 0 5px #212121, 140px 40px 0 5px #64a9ed, 150px 40px 0 5px #212121, 160px 40px 0 5px #64a9ed, 170px 40px 0 5px #212121, -20px 50px 0 5px #212121, -10px 50px 0 5px #64a9ed, 0px 50px 0 5px #1976D2, 10px 50px 0 5px #1976D2, 20px 50px 0 5px #212121, 30px 50px 0 5px white, 40px 50px 0 5px #1976D2, 50px 50px 0 5px #1976D2, 60px 50px 0 5px #1976D2, 70px 50px 0 5px #1976D2, 80px 50px 0 5px #1976D2, 90px 50px 0 5px #1976D2, 100px 50px 0 5px #212121, 130px 50px 0 5px #212121, 140px 50px 0 5px #64a9ed, 150px 50px 0 5px #64a9ed, 160px 50px 0 5px #64a9ed, 170px 50px 0 5px #212121, -20px 60px 0 5px #212121, -10px 60px 0 5px #64a9ed, 0px 60px 0 5px #1976D2, 10px 60px 0 5px #1976D2, 20px 60px 0 5px #1976D2, 30px 60px 0 5px #1976D2, 40px 60px 0 5px #1976D2, 50px 60px 0 5px #1976D2, 60px 60px 0 5px #1976D2, 70px 60px 0 5px #1976D2, 80px 60px 0 5px #1976D2, 90px 60px 0 5px #1976D2, 100px 60px 0 5px #1976D2, 110px 60px 0 5px #212121, 140px 60px 0 5px #212121, 150px 60px 0 5px #64a9ed, 160px 60px 0 5px #212121, -20px 70px 0 5px #212121, -10px 70px 0 5px white, 0px 70px 0 5px white, 10px 70px 0 5px white, 20px 70px 0 5px white, 30px 70px 0 5px white, 40px 70px 0 5px #1976D2, 50px 70px 0 5px #1976D2, 60px 70px 0 5px #1976D2, 70px 70px 0 5px #1976D2, 80px 70px 0 5px #1976D2, 90px 70px 0 5px #1976D2, 100px 70px 0 5px #1976D2, 110px 70px 0 5px #1976D2, 120px 70px 0 5px #212121, 130px 70px 0 5px #212121, 140px 70px 0 5px #64a9ed, 150px 70px 0 5px #1976D2, 160px 70px 0 5px #212121, -10px 80px 0 5px #212121, 0px 80px 0 5px #c7c7c7, 10px 80px 0 5px #c7c7c7, 20px 80px 0 5px #c7c7c7, 30px 80px 0 5px #c7c7c7, 40px 80px 0 5px #212121, 50px 80px 0 5px #1976D2, 60px 80px 0 5px #64a9ed, 70px 80px 0 5px #c7c7c7, 80px 80px 0 5px #c7c7c7, 90px 80px 0 5px #c7c7c7, 100px 80px 0 5px #1976D2, 110px 80px 0 5px #1976D2, 120px 80px 0 5px #1976D2, 130px 80px 0 5px #1976D2, 140px 80px 0 5px #1976D2, 150px 80px 0 5px #212121, 0px 90px 0 5px #212121, 10px 90px 0 5px #212121, 20px 90px 0 5px #212121, 30px 90px 0 5px #212121, 40px 90px 0 5px #212121, 50px 90px 0 5px #212121, 60px 90px 0 5px #64a9ed, 70px 90px 0 5px #212121, 80px 90px 0 5px #212121, 90px 90px 0 5px #212121, 100px 90px 0 5px #212121, 110px 90px 0 5px #212121, 120px 90px 0 5px #212121, 130px 90px 0 5px #212121, 140px 90px 0 5px #212121, 20px 100px 0 5px #212121, 30px 100px 0 5px #212121, 60px 100px 0 5px #212121, 70px 100px 0 5px #212121;
+   }
+   body .whale .fountain {
+     -webkit-animation: move 1s infinite;
+     -moz-animation: move 1s infinite;
+     -o-animation: move 1s infinite;
+     animation: move 1s infinite;
+     -webkit-animation-timing-function: linear;
+     animation-timing-function: linear;
+   }
