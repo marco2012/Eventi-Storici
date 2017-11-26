@@ -6,7 +6,9 @@ youTube.setKey(YOUTUBE_KEY);
 
 var query = 'Docker'
 
-youTube.search(query, 1, function(error, result) {
+youTube.search(query, 1, response);
+
+function response (error, result) {
   if (error) console.log(error);
   else {
     var titolo = result.items[0].snippet.title
@@ -15,4 +17,4 @@ youTube.search(query, 1, function(error, result) {
     console.log(titolo)
     console.log(link)
   }
-});
+}
