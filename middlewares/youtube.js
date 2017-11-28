@@ -9,12 +9,12 @@ var query = 'Docker'
 youTube.search(query, 1, response);
 
 function response (error, result) {
-  if (error) console.log(error);
-  else {
-    var titolo = result.items[0].snippet.title
-    var id = result.items[0].id.videoId
-    var link = 'https://www.youtube.com/watch?v='+id
-    console.log(titolo)
-    console.log(link)
-  }
+    if (error) console.log(error);
+    else {
+        var titolo = result.items[0].snippet.title
+        var id = result.items[0].id.videoId
+        var link = 'https://www.youtube.com/watch?v='+id
+        console.log(titolo)
+        console.log(link)
+    }
 }
