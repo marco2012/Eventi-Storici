@@ -5,7 +5,6 @@ var query = ''
 
 
 var options = {
-
     url : 'https://api.qwant.com/api/search/images?count=5&offset=1&q=gatti'
 }
 
