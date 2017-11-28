@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae8602a8-0f57-449b-b40e-fef5e6a8ff96" name="Default" comment="immagini">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drive/image.js" afterPath="$PROJECT_DIR$/drive/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/middlewares/docker_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/middlewares/auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/middlewares/drive_upload2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/date.js" afterPath="$PROJECT_DIR$/controllers/date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middlewares/drive_oauth.js" afterPath="$PROJECT_DIR$/middlewares/drive_oauth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middlewares/youtube.js" afterPath="$PROJECT_DIR$/middlewares/youtube.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/date.js" afterPath="$PROJECT_DIR$/models/date.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,8 +52,8 @@
       <file leaf-file-name="image.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drive/image.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -55,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/ComeCazzoFunziona.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -194,7 +202,7 @@
       <updated>1511719670867</updated>
       <workItem from="1511719674350" duration="5540000" />
       <workItem from="1511729997869" duration="1089000" />
-      <workItem from="1511806215063" duration="9970000" />
+      <workItem from="1511806215063" duration="10115000" />
     </task>
     <task id="LOCAL-00001" summary="Implementata:&#10;-scrittura su file &#10;-caricamento file su google drive">
       <created>1511730212786</created>
@@ -214,7 +222,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16599000" />
+    <option name="totallyTimeSpent" value="16744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="990" height="682" extended-state="0" />
@@ -362,7 +370,7 @@
     <entry file="file://$PROJECT_DIR$/ComeCazzoFunziona.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -377,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drive/image.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="213">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>
