@@ -1,5 +1,6 @@
-
-#I file con queste estensioni vengono ignorati da GitHub#
+##################################################################
+#   I file con queste estensioni vengono ignorati da GitHub      #
+##################################################################
 
 ######################
 # OS generated files #
@@ -13,13 +14,12 @@
 ehthumbs.db
 Thumbs.db
 
-#################
-#Compiled source#
-#################
-*.class
-*.o
-
 ##########################
 # NodeJS generated files #
 ##########################
 node_modules
+
+############################
+# IntelliJ generated files #
+############################
+.idea
