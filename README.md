@@ -1,4 +1,4 @@
-# **PROGETTO RETI DI CALCOLATORI**
+# **PROGETTO RETI DI CALCOLATORI** 🐳
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
@@ -66,8 +66,10 @@ pass:  behdaicapolavoro
 - [Guida Git](https://rogerdudler.github.io/git-guide/index.it.html)
 
 - [Google API](https://console.developers.google.com/)
-  - [Google calendar](https://developers.google.com/google-apps/calendar/create-events)
-  - [Google drive oauth](https://developers.google.com/identity/protocols/OAuth2WebServer)
+
+- [Dropbox API](https://www.dropbox.com/developers/documentation/http/documentation)
+
+- [Dropbox API Explorer](https://dropbox.github.io/dropbox-api-v2-explorer/)
 
 - [Oauth](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
