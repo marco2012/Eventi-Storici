@@ -56,7 +56,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 
 ## **Cose utili**
 
-**Account Google**
+**Account Google, Facebook, Twitter**
 ```
 email: dockervrun@gmail.com
 pass:  behdaicapolavoro
