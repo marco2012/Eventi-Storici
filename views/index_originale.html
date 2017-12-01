@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Docker ti amo!</title>
+
+    <style>
+      h1 {font-family: monospace; text-align:center;}
+      h3 {font-family: helvetica; text-align:center;}
+    </style>
+
+    <script type="text/javascript" language="javascript">
+
+      function validaGiorno() {
+        var giorno = parseInt(document.eseform.giorno.value);
+
+        if (isNaN(giorno)) {
+          alert("Il giorno deve essere un numero");
+          document.eseform.giorno.value=01;
+          return false;
+        }
+        if(giorno<1 || giorno>31){
+          alert("Il giorno deve essere compreso tra 1 e 31");
+          document.eseform.giorno.value=01;
+          return false;
+        }
+        return true;
+      }
+
+      function validaForm() {
+        var giorno = parseInt(document.eseform.giorno.value);
+        var mese = document.eseform.mese.value;
+        if(mese=="nessuno"){
+          alert('inserire il mese');
+          return false;
+        }
+        if(mese=="aprile"&&giorno==31){
+          alert("data non valida");
+          return false;
+        }
+        var numero_mese=0;
+        switch (mese) {
+          case "gennaio":
+              numero_mese=1;
+              break;
+          case "febbraio":
+              numero_mese=2;
+              break;
+          case "marzo":
+              numero_mese=3;
+              break;
+          case "aprile":
+              numero_mese=4;
+              break;
+          case "maggio":
+              numero_mese=5;
+              break;
+          case "giugno":
+              numero_mese=6;
+              break;
+          case "luglio":
+              numero_mese=7;
+              break;
+          case "agosto":
+              numero_mese=8;
+              break;
+          case "settembre":
+              numero_mese=9;
+              break;
+          case "ottobre":
+              numero_mese=10;
+              break;
+          case "novembre":
+              numero_mese=11;
+              break;
+          default:
+              numero_mese=12;
+              break;
+          }
+
+        var data = numero_mese+"/"+giorno;
+        console.log(data);
+        location.href = 'http://history.muffinlabs.com/date/'+data;
+        return true;
+      }
+
+      function dataOggi() {
+        var today = new Date();
+      	var dd = today.getDate();
+      	var mm = today.getMonth()+1; //January is 0!
+      	// if(dd<10){
+      	//     dd='0'+dd;
+      	// }
+      	// if(mm<10){
+      	//     mm='0'+mm;
+      	// }
+      	var data = mm+'/'+dd;
+        location.href = 'http://history.muffinlabs.com/date/'+data;
+        return true;
+      }
+      //action="http://history.muffinlabs.com/"
+    </script>
+
+  </head>
+  <body bgcolor="#0db7ed">
+    <div align="center">
+      <form name="eseform" action="">
+        <h1>Docker forever</h1>
+        <h3>Inserisci la data da cercare</h3>
+        Giorno: <input name="giorno" type="text" size="2" maxlength="2" value="1" onchange="return validaGiorno();">
+        <!-- <br><br> -->
+        Mese: <select name="mese">
+          <option value="nessuno" selected>Seleziona</option>
+          <option value="gennaio">gennaio</option>
+          <option value="febbraio">febbraio</option>
+          <option value="marzo">marzo</option>
+          <option value="aprile">aprile</option>
+          <option value="maggio">maggio</option>
+          <option value="giugno">giugno</option>
+          <option value="luglio">luglio</option>
+          <option value="agosto">agosto</option>
+          <option value="settembre">settembre</option>
+          <option value="ottobre">ottobre</option>
+          <option value="novembre">novembre</option>
+          <option value="dicembre">dicembre</option>
+      </select><br><br>
+      <input type="button" name="Invia" value="Invia" onclick="return validaForm();" >
+      <input type="reset" name="reset" value="Reset">
+      <input type="button" name="Oggi" value="Eventi del giorno" onclick="return dataOggi();">
+      </form>
+      <br>
+      <img src="../Materiale_di_Riferimento/docker_image.png" alt="docker logo" title="Docker" height="60" width=""/>
+    </div>
+  </body>
+</html>
