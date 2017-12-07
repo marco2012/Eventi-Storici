@@ -51,7 +51,7 @@ Oltre all'operazione di scrittura dul Drive, gli eventi vengono salvati su Couch
 
 ### Gruppo
 - [ ] WebSocket
-- [ ] RabbitMQ
+- [x] RabbitMQ
 
 
 ## **Cose utili**
