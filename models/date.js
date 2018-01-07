@@ -1,31 +1,50 @@
 //File che si occupa della gestione dei vari record delle date e del loro salvataggio
 
 var db = require("../config/db")
+var request = require("request")
+var ml_url = "http://history.muffinlabs.com/date"
 
 
-//Metodo che inserisce i documenti all'interno del database.
-//Prende in input un oggetto javascript indicante il documento da inserire nel database.
-//In caso di successo nell'insermineto restituisce callback(0), altrimenti restituisce callback(-1).
-//Si sfrutta il meccanismo della callback, quindi quando invocate questo metodo dovete fornire una funzione
-//anonima che dato un risultato agisce opportunamente.
-//In quetso caso particolare 0 indica il corretto inserimento, -1 indica un errore
-exports.insert = function(doc, callback) {
-    db.save(doc, (res) => {
-        if (err == -1) callback(err)
-        else callback(0)
+//Salva una data all'interno di couchdb
+exports.insert = function(doc) {
+    db.save(doc, (res, msg) => (res, msg) => {
+        console.log("ritorno dal db")
+        console.log(msg)
     })
 }
 
-//Metodo che preso in input una stringa indicante la data da ricercare in formato "<Month>/<Day>" esegue una ricerca
-//del relativo record all'interno del database.
-//In caso di successo nella ricerca restituisce callback(0, doc), altrimenti restituisce callback(-1, doc).
-//Anche in questo caso vengono sfruttate le callback, quindi all'invocazione del metodo search
-//dovete fornire una funzione anonima che presi in input un docuemto e un codice di ritorno, agisce di conseguenza
-//0 indica in successo e doc in questo caso sarà un oggetto javascript contente il documento di interesse,
-//-1 indica l'assenza del documento nel database
+
+//Metodo che verifica la presenza del record relativo alla data nel database.
+//La data da dare in input deve essere fornita in formato "/<Mese>/<Anno>"
+//dove il mese e l'anno sono indicati come numeri.
+//Il 5 gennaio ad esempio deve essere cercato come search("/1/5", callback).
+//Se esso non è presente nel databse il metodo esegue la chiamata all'API muffin labs restituendo
+//callback(-1, obj), se invece il doumento è presente nel databse restituisce callback(0, obj).
+//callback(-2, msg) indica la presenza di un errore di rete e msg specifica l'errore
+
 exports.search = function(date, callback) {
-    db.fetch(date, => (res, doc) {
-        if (res == -1) callback(res, null)
-        else callback(0, doc)
+    db.fetch(date, (result, doc) => {
+        if (result == -1 && doc == null) {
+            request.get(ml_url + date, (err, resp, body) => {
+                if (err) callback(-2, "Unable to connect for API utilization")
+                else {
+                    var obj = JSON.parse(body)
+                    var ret_obj = {
+                        date: obj.date,
+                        url: obj.url,
+                        events: []
+                    }
+                    for (var i = 0; i < obj.data.Events.length; i++) {
+                        ret_obj.events[i] = {
+                            year: obj.data.Events[i].year,
+                            text: obj.data.Events[i].text,
+                            links: obj.data.Events[i].links
+                        }
+                    }
+                    callback(result, ret_obj)
+                }
+            })
+        }
+        else callback(result, doc)
     })
 }

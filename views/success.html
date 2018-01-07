@@ -1,0 +1,89 @@
+
+<!-- QUI VENGONO IMPLEMENTATI I WEBSOCKET -->
+
+<!DOCTYPE html>
+<head>
+    <title>Cerca Eventi Storici</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- se lo metto esterno non lo legge... -->
+    <!-- <link rel="stylesheet" type="text/css" href="static/stylesheets/success_style.css"> -->
+    <style>
+        body {
+            background-color: #042833;
+            color:white;
+            font-family: arial
+        }
+        h1 { text-align: center; }
+        #webSocketDiv {
+            font-family: monospace;
+            font-size: 16px;
+            min-height: 220px;
+        }
+        a:link { color:white }
+        a:visited { color: white; }
+        a:active { color: grey; }
+    </style>
+
+    <script type="text/javascript" language="javascript">
+
+    function redirectToIndex(){
+        socket.close();
+        alert("Connessione websocket chiusa.")
+        console.log("Connessione websocket chiusa.")
+        var token = window.location.search
+        location.href = 'http://localhost:3000/'+token;
+    }
+
+    //*****************
+    //   WEB SOCKET
+    //*****************
+    if (!"WebSocket" in window) alert("WebSocket non supportati dal tuo browser");
+
+    // Open a connection
+    var socket = new WebSocket('ws://localhost:4000/');
+
+    // When a connection is made
+    socket.onopen = function() {
+        console.log('[WEBSOCKET] Connessione con il server stabilita');
+        // send data to the server
+        socket.send('Il client ti saluta 👋');
+    }
+
+    // When data is received
+    socket.onmessage = function(event) {
+        console.log(event.data);
+        var div = document.getElementById('webSocketDiv');
+        div.innerHTML += event.data + "<br>"
+    }
+
+    // A connection could not be made
+    socket.onerror = function(event) {
+        console.log(event);
+    }
+
+    // A connection was closed
+    socket.onclose = function(code, reason) {
+        console.log(code, reason);
+    }
+
+    // Close the connection when the window is closed
+    window.addEventListener('beforeunload', function() {
+        socket.close();
+    });
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Successo</h1>
+    <h3>Il server sta eseguendo le seguenti operazioni...</h3>
+    <br><br>
+    <!-- i websocket scrivono in questa sezione -->
+    <div id="webSocketDiv"></div>
+    <br><br>
+    <input class="button" type="button" name="redirect" value="Torna indietro" onclick="return redirectToIndex();">
+
+</body>
+</html>

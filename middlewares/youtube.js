@@ -1,20 +1,33 @@
 //https://www.npmjs.com/package/youtube-node
-var YouTube = require('youtube-node');
-var youTube = new YouTube();
+var ws          = require('../middlewares/ws')
+var YouTube     = require('youtube-node');
+var youTube     = new YouTube();
 var YOUTUBE_KEY = 'AIzaSyCgBUJdvcF7Cx5jA9qSMSsxRAwvT0zimOA'
 youTube.setKey(YOUTUBE_KEY);
 
-var query = 'Docker'
-
-youTube.search(query, 1, response);
-
-function response (error, result) {
-    if (error) console.log(error);
-    else {
-        var titolo = result.items[0].snippet.title
-        var id = result.items[0].id.videoId
-        var link = 'https://www.youtube.com/watch?v='+id
-        console.log(titolo)
-        console.log(link)
+exports.searchVideo = function(query, callback){
+    youTube.search(query, 1, function (error, result) { //cerco su youtube il titolo del primo link
+        if (error) console.log(error);
+        else {
+            var youtube_link
+            // if (result.items.length > 0) { //c'e' almeno 1 risultato
+            if (result.items != null) {  //l'array dei risultati esiste
+            var id = result.items[0].id.videoId
+            // if (id) {
+            youtube_link = 'https://www.youtube.com/watch?v='+id
+            console.log("[MIDDLEWARE][YOUTUBE]   Video su youtube trovato: "+youtube_link);
+            ws.send('[MIDDLEWARE][YOUTUBE]   <a target="_blank" href="'+youtube_link+'">Video su youtube trovato</a>')
+            // }
+            // else {
+            //     youtube_link = ''
+            //     console.log("[MIDDLEWARE][YOUTUBE]   Video su youtube NON trovato");
+            //     ws.send("[MIDDLEWARE][YOUTUBE]   Video su youtube NON trovato")
+            // }
+        } else {
+            console.log("[MIDDLEWARE][YOUTUBE]   Video su youtube NON trovato");
+            ws.send("[MIDDLEWARE][YOUTUBE]   Video su youtube NON trovato")
+        }
+        callback(youtube_link)
     }
+})
 }

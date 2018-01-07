@@ -1,7 +1,0 @@
-
-Fri Dec 16 2016 12:53:55 GMT+0100 (ora solare Europa occidentale): htc 10
-Fri Dec 16 2016 12:54:50 GMT+0100 (ora solare Europa occidentale): lg g5
-Fri Dec 16 2016 12:55:40 GMT+0100 (ora solare Europa occidentale): samsung galaxy s7
-Fri Dec 16 2016 12:55:53 GMT+0100 (ora solare Europa occidentale): samsung galaxy j1 ace ve
-Fri Dec 16 2016 12:56:20 GMT+0100 (ora solare Europa occidentale): sony xperia x performance
-Fri Dec 16 2016 12:56:07 GMT+0100 (ora solare Europa occidentale): huawei p9

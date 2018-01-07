@@ -1,1 +1,0 @@
-server_address,rabbit_user,rabbit_pwd, queue_name

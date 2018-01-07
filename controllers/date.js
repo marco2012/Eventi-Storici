@@ -1,36 +1,46 @@
+const path         = require('path');
+const express      = require("express")
+const router       = express.Router()
 
-var express = require("express")
-var date_mw = require("../middlewares/date")
+const helper       = require("../helpers/helper")
+const date         = require("../models/date")
+const dpx_mw       = require("../middlewares/dropbox")
+const twitter_mw   = require("../middlewares/twitter")
+const telegram_mw  = require("../middlewares/telegram")
+const get_links_mw = require("../middlewares/get_links")
+const amqp_mw      = require("../middlewares/amqp")
+const ws           = require('../middlewares/ws')
 
-var router = express.Router()
+router.get("/*", (req, res) => {
+    var token = req.query.access_token
+    var data = req.path //ad esempio /12/1
 
-<<<<<<< HEAD
-router.get("/", (req, res) => {
-    //Qui va inserita la logica del controller
-    //All'arrivo della get viene passato il controllo al middleware che si occupa del Reperimento dei dati
-    //Quindi prima l'interrogazione del database e in caso la chiamata all'API muffinlabs(Francesco)
-    //Parte il middleware che si occupa dell'autenticazione Oauth(Marco).
-    //In seguito viene chiamato un altro middleware che si occupa della gestione del file su Google drive(
-    //La parte di Aldo e Francesca rispettivamente per scrittura del file e API youtube)
-=======
-router.get("/", function(req, res) {
-    var date = (req.path.split("/"))[1].replace(/-/, " ")  //è piu comodo scrivere la data in formato <Mese>-<Giorno>
-    date.search(date, function(err, doc){
-        if (err == -1) {
-            //chiamata all'api che ci fornisce il documento
+    //redirect alla pagina che mostra il log degli eventi tramite websocket
+    res.sendFile(path.resolve('.') + '/views/success.html')
 
-            //http.get({
-                url: "http://history.muffinlabs.com/date/"
+    date.search(data, (result, doc) => {
+
+        console.log('[CONTROLLER][DATE]      ' + helper.resolveStatusCode(result)); //stampa il significato del codice restituito dalla ricerca
+        ws.send('[CONTROLLER][DATE]      ' + helper.resolveStatusCode(result)); //stampa il significato del codice restituito dalla ricerca
+
+        if (result == -2) res.send("Connection error")
+        if (result == -1) { //inserimento con rabbitMQ
+            amqp_mw.send(doc, (res) => {
+                if (res == -1) console.log("[AMQP] Errore nell'invio del messaggio")
+                else console.log("[AMQP] Messaggio inviato correttamente")
             })
-
-
-
-            
-            //chiamata allo scrittore tramite rabbitMQ
-            //Scrittura sul drive del file
         }
-        else if (err == null) {
-            //Scrittura sul drive del file, gia presente nel database
-        }
->>>>>>> d0b3cab... Mavaffanculo!!
+
+        //cerca i link una sola volta e li da a twitter e telegram
+        get_links_mw.getLinks(doc, function(i, youtube_link, image_url, description){
+            telegram_mw.telegram(doc, i, youtube_link, image_url, description)
+            twitter_mw.tweet(doc, i, youtube_link, image_url, description)
+        })
+
+        // scrive eventi sul file e li carica su Dropbox
+        dpx_mw.upload(doc, token)
+
     })
+})
+
+module.exports = router

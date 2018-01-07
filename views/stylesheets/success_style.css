@@ -1,0 +1,21 @@
+body {
+    background-color: #042833;
+    color:white;
+    font-family: arial
+}
+h1 {
+    text-align: center;
+}
+#webSocketDiv {
+    font-family: monospace;
+    font-size: 16px;
+}
+a:link {
+    color:white
+}
+a:visited {
+    color: white;
+}
+a:active {
+    color: grey;
+}
