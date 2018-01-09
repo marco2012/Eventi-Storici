@@ -1,4 +1,4 @@
-# 📖 EVENTI STORICI 📖
+# ⚔️📖 EVENTI STORICI 📖⚔️
 
 # **PROGETTO RETI DI CALCOLATORI**
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
@@ -43,9 +43,6 @@ Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita d
 
 ## [**Link Utili**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
 
-- [Canale Telegram](https://t.me/behdaicapolavoro)
-
-- [Profilo Twitter](https://twitter.com/dockervrun)
 
 - [Dropbox Oauth](https://www.dropbox.com/developers/documentation/http/documentation#oauth2-authorize)
 
