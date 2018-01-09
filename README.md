@@ -41,7 +41,7 @@ Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita d
 ## [**API reference**](https://github.com/marco2012/Eventi-Storici/wiki#api-utilizzate)
 
 
-## **Link Utili**
+## [**Link Utili**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
 
 - [Canale Telegram](https://t.me/behdaicapolavoro)
 
