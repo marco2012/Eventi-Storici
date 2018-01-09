@@ -71,7 +71,13 @@
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0!
-        var data = mm+'/'+dd;
+        // Funzione di padding (riempimento con 0 per il mese e per il giorno)
+        var pad = "00"
+        var giorno = String(dd);
+        giorno = pad.substring(0, pad.length - giorno.length) + giorno
+        var mese = String(mm);
+        mese = pad.substring(0, pad.length - mese.length) + mese
+        var data = mese+'/'+giorno;
         var token = window.location.search
         location.href = 'http://localhost:3000/date/'+data+token;
         // setTimeout(function() { alert('Il server sta eseguendo le operazioni...') }, 1); //non blocca il flusso di esecuzione, fa apparire alert in modo asincrono

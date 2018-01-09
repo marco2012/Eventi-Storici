@@ -11,6 +11,8 @@ const db_url = "http://localhost:5984/"+db_name
 //URL richiesta da CouchDB per eseguire la query
 const view_url = db_url + "/_design/date/_view/getByDate"
 
+const find_url = db_url + "/_find"
+
 
 //Metodo che attraverso POST http inserisce i documenti all'interno del database tramite CouchDB
 exports.save = function(doc, callback) {
@@ -38,15 +40,24 @@ exports.fetch = function(date, callback) {
     if (day.charAt(0) == '0') day = day.slice(1)
     var qs_date = '\"' + helper.resolveMonth(split_date[1]) + ' ' + day + '\"'
     console.log('[  CONGIF  ][DB]        Data da cercare nel DB: '+ qs_date);
-    request.get({
-        url: view_url,
-        qs: { key: qs_date}
+    // Richiesta post per ricercare dati nel database
+    request.post({
+        url: find_url, //_find
+        json: true, //comunicazione avviene utilizzando Json
+        body: { // Dalle API di couh db http://docs.couchdb.org/en/2.1.1/api/database/find.html?highlight=query
+          "selector":{
+            // Ricerca nei documenti (tabella) di couchdb se presente un record che come campo "date" contiene
+            // la data specificata
+            "date":helper.resolveMonth(split_date[1]) + ' ' + day //Data in formato Month day Esempio: May 11
+          }
+        }
     }, (err, res, body) => {
         if (err) callback(-2, "Unable to connect")
         else {
-            var obj = JSON.parse(body)
-            if (obj.rows == null) callback(-1, null)
-            else if (obj.rows.length >= 1) callback(0, obj.rows[0].value)
+          // La risposta è un Json contenuto nella variabile body nel formato:
+          // {docs: [{ris1},{ris2},{ris2}]}
+          if (body.docs.length == 0) callback(-1, null)
+          else callback(0, body.docs[0]) //Ritorno solo il primo.
         }
     })
 }
