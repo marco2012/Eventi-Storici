@@ -42,6 +42,11 @@ Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita d
 ## [**Link Utili**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
 
 
+## [**Struttura**](https://github.com/marco2012/Eventi-Storici/wiki#struttura)
+
+
+## _Da rimuovere_:
+
 - [Dropbox Oauth](https://www.dropbox.com/developers/documentation/http/documentation#oauth2-authorize)
 
 - [Guida Oauth](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
