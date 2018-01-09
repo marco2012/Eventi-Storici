@@ -40,9 +40,9 @@ Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita d
 
 ## [**Link Utili**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
 
-## [**Link Struttura**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
+## [**Struttura**](https://github.com/marco2012/Eventi-Storici/wiki#struttura)
 
-## [**Struttura**](https://github.com/marco2012/Eventi-Storici/wiki#struttura)
+
 
 
 #### _Da rimuovere_:
