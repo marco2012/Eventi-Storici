@@ -21,7 +21,9 @@ Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 - Per installare le dipendenze eseguire `npm install`, verranno lette dal file *package.json* e installate.
 
-- Per avviare il server eseguire `node app` (**RabbitMQ e CouchDB devono essere in esecuzione** su localhost).
+- Per avviare il server eseguire `node app` 
+
+(**RabbitMQ e CouchDB devono essere in esecuzione** su localhost. Deve esistere un database dal nome `eventi_storici_db`).
 
 
 ## **Descrizione**
