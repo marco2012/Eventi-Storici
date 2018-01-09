@@ -1,6 +1,4 @@
-# ⚔️📖 EVENTI STORICI 📖⚔️
-
-# **PROGETTO RETI DI CALCOLATORI**
+# 📖 EVENTI STORICI 📖 - PROGETTO RETI DI CALCOLATORI
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
