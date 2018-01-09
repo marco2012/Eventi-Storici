@@ -1,6 +1,4 @@
-# 📖 EVENTI STORICI 📖
-
-# **PROGETTO RETI DI CALCOLATORI**
+# 📖 EVENTI STORICI 📖 - PROGETTO RETI DI CALCOLATORI
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 ## **Persone nel gruppo**
@@ -32,7 +30,7 @@ Il progetto utilizza le API fornite da http://history.muffinlabs.com/ per cercar
 
 Una volta ottenuti, tali eventi storici vengono salvati, con i link alla relativa pagina wikipedia, in un file su Dropbox acceduto tramite Oauth.
 
-Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita da RabbitMQ e un evento casuale viene pubblicato su Twitter e Telegram con link wikipedia, link vide youtube, immagine con relativa descrizione fornita da intelligenza artificiale.
+Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita da RabbitMQ e un evento casuale viene pubblicato su Twitter e Telegram con link wikipedia, link video youtube, immagine con relativa descrizione fornita da intelligenza artificiale Microsoft.
 
 
 ## [Descrizione dettagliata](https://github.com/marco2012/Docker/wiki#descrizione-dettagliata)
@@ -41,11 +39,8 @@ Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita d
 ## [**API reference**](https://github.com/marco2012/Eventi-Storici/wiki#api-utilizzate)
 
 
-## **Link Utili**
+## [**Link Utili**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
 
-- [Canale Telegram](https://t.me/behdaicapolavoro)
-
-- [Profilo Twitter](https://twitter.com/dockervrun)
 
 - [Dropbox Oauth](https://www.dropbox.com/developers/documentation/http/documentation#oauth2-authorize)
 
