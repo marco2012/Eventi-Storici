@@ -23,7 +23,7 @@ Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 - Per avviare il server eseguire `node app` 
 
-(**RabbitMQ e CouchDB devono essere in esecuzione** su localhost. Deve esistere un database dal nome `eventi_storici_db`).
+- (**RabbitMQ e CouchDB devono essere in esecuzione** su _localhost_. Deve esistere un database dal nome `eventi_storici_db`).
 
 
 ## **Descrizione**
