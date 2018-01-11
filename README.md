@@ -16,10 +16,11 @@ Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 - Per avviare il server eseguire `node app`
 
-- (**RabbitMQ e CouchDB devono essere in esecuzione** su _localhost_. Deve esistere un database dal nome `eventi_storici_db`).
+- **RabbitMQ e CouchDB devono essere in esecuzione** su _localhost_.
 
+- Deve esistere un database dal nome `eventi_storici_db`.
 
-## **Descrizione**
+## [Descrizione](https://github.com/marco2012/Eventi-Storici/wiki#descrizione)
 
 Il progetto utilizza le API fornite da http://history.muffinlabs.com/ per cercare tutti gli eventi storici avvenuti in un giorno particolare.
 
@@ -27,9 +28,7 @@ Una volta ottenuti, tali eventi storici vengono salvati, con i link alla relativ
 
 Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita da RabbitMQ e un evento casuale viene pubblicato su Twitter e Telegram con link wikipedia, link video youtube, immagine con relativa descrizione fornita da intelligenza artificiale Microsoft.
 
-
 ## [Descrizione dettagliata](https://github.com/marco2012/Docker/wiki#descrizione-dettagliata)
-
 
 ## [**API reference**](https://github.com/marco2012/Eventi-Storici/wiki#api-utilizzate)
 
