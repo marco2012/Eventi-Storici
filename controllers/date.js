@@ -23,14 +23,13 @@ router.get("/*", (req, res) => {
         console.log('[CONTROLLER][DATE]      ' + helper.resolveStatusCode(result)); //stampa il significato del codice restituito dalla ricerca
         ws.send('[CONTROLLER][DATE]      ' + helper.resolveStatusCode(result)); //stampa il significato del codice restituito dalla ricerca
 
+        //errore connessioe
         if (result == -2) res.send("Connection error")
-        if (result == -1) { //inserimento con rabbitMQ
-            amqp_mw.send(doc, (res) => {
-                if (res == -1) console.log("[AMQP] Errore nell'invio del messaggio")
-                else console.log("[AMQP] Messaggio inviato correttamente")
-            })
-        }
 
+        //doc non presente in couchdb e lo inserisco con rabbitMQ
+        if (result == -1) amqp_mw.send(doc)
+
+        //l'evento sta nel database
         //cerca i link una sola volta e li da a twitter e telegram
         get_links_mw.getLinks(doc, function(i, youtube_link, image_url, description){
             telegram_mw.telegram(doc, i, youtube_link, image_url, description)

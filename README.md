@@ -1,13 +1,6 @@
 # 📖 EVENTI STORICI 📖 - PROGETTO RETI DI CALCOLATORI
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
-## **Persone nel gruppo**
-- Aldo
-- Giuseppe
-- Francesca
-- Francesco
-- Marco
-
 ## **Requisiti**
 - [x] Il servizio REST implementato deve interfacciare almeno due servizi REST *esterni*, cioè non su localhost
 - [x] Almeno uno dei servizi REST esterni deve essere *commerciale* (es: twitter, google, facebook, pubnub, parse, firbase etc)

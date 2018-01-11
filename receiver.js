@@ -3,7 +3,8 @@ const date = require("./models/date")
 
 const q = "write_queue"
 const amqp_url = 'amqp://localhost'
-// const amqp_url = 'amqp://qcsqalhj:KzTr3j30QwsPp9pkD2z887mkQ7gsc777@gopher.rmq.cloudamqp.com/qcsqalhj' //questa url funziona remoto, cosi non è necessario avere rabbitmq in esecuzione
+
+//Consumer
 
 amqp.connect(amqp_url, function(err, conn) {
     conn.createChannel(function(err, ch) {

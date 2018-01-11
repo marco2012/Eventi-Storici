@@ -4,13 +4,14 @@ const ws        = require('../middlewares/ws')
 const q         = "write_queue"
 
 const amqp_url  = 'amqp://localhost'
-// const amqp_url = 'amqp://qcsqalhj:KzTr3j30QwsPp9pkD2z887mkQ7gsc777@gopher.rmq.cloudamqp.com/qcsqalhj' //questa url funziona remoto, cosi non è necessario avere rabbitmq in esecuzione
+
+//Producer
 
 exports.send = function(msg, callback) {
     amqp.connect(amqp_url, function(err, conn) {
         conn.createChannel(function(err, ch) {
-            ch.assertQueue(q, {durable: false})
-            ch.sendToQueue(q, new Buffer(JSON.stringify(msg)))
+            ch.assertQueue(q, {durable: false}) //crea coda se non c'e'
+            ch.sendToQueue(q, new Buffer(JSON.stringify(msg))) //messaggio di muffinlabs
             console.log("[MIDDLEWARE][AMQP]      Messaggio inviato con amqp")
             ws.send("[MIDDLEWARE][AMQP]      Messaggio inviato con amqp")
         })

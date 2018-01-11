@@ -11,7 +11,9 @@ exports.getLinks = function(doc,callback){
     console.log("[MIDDLEWARE][GET_LINKS] Numero evento: " + i);
     ws.send("[MIDDLEWARE][GET_LINKS] Numero evento: " + i)
 
-    var query = doc.events[i].links[0].title
+    // var query = doc.events[i].links[0].title
+    if (doc.events[i].links) var query    = doc.events[i].links[0].title
+    else callback(i, "", "", "")
 
     youtube_mw.searchVideo(query, function(youtube_link){                   //link video youtube
         image_search_mw.searchImage(query, function(image_url){             //link immagine
