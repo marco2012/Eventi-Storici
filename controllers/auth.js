@@ -1,7 +1,7 @@
-var express = require("express")
-var dpx_mw = require("../middlewares/dropbox")
+const express = require("express")
+const dpx_mw = require("../middlewares/dropbox")
 
-var router = express.Router()
+const router = express.Router()
 
 router.get("/", (req, res) => dpx_mw.authenticate(res))
 
