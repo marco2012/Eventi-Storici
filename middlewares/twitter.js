@@ -2,10 +2,10 @@ const ws          = require('../middlewares/ws')
 
 const Twit = require('twit');
 const T = new Twit({
-    consumer_key:         '2KHcOti7vj4mkmFia2aZ8MjHy',
-    consumer_secret:      'CcBFhiwWQpi6xTKW8RXnTRBymcNHFQYLDbtTyvKUtDRtwA2k9e',
-    access_token:         '935948964985278465-9g8X12aPSQgByuewrBxKFOMiZ6AE3rU',
-    access_token_secret:  'wStoerO8EL6951GsQZ6FjW6a4jF1eskPlWWAS0peakfTF'
+    consumer_key:         '',
+    consumer_secret:      '',
+    access_token:         '',
+    access_token_secret:  ''
 });
 
 exports.tweet = function(doc, i, youtube_link, image_url, description){
