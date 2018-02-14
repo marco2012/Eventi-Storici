@@ -4,7 +4,7 @@
 const request     = require("request")
 const ws          = require('../middlewares/ws')
 
-const token       = '450693776:AAHNx8nApw-2ZOhN85VByIPgi4U_KnVObcU';
+const token       = '';
 const channelID   = "@eventi_storici"
 
 exports.telegram = function(doc, i, youtube_link, image_url, description){
