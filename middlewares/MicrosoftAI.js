@@ -3,7 +3,7 @@
 const request = require("request")
 const ws      = require('../middlewares/ws')
 
-const SUBSCRIPTION_KEY = "7032fec17a274945bcc7245489730e33"
+const SUBSCRIPTION_KEY = ""
 const visualFeature = "Description"                           //da scegliere tra Descriprion,Categories,Color,ImageType,Faces,Tags
 
 exports.describeImage = function(imageURL, callback){
