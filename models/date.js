@@ -17,8 +17,8 @@ exports.insert = function(doc) {
 //Metodo che verifica la presenza del record relativo alla data nel database.
 //La data da dare in input deve essere fornita in formato "/<Mese>/<Anno>"
 //dove il mese e l'anno sono indicati come numeri.
-//Il 5 gennaio ad esempio deve essere cercato come search("/1/5", callback).
-//Se esso non è presente nel databse il metodo esegue la chiamata all'API muffin labs restituendo
+//Il 5 gennaio ad esempio deve essere cercato come search("/01/05", callback).
+//Se esso non è presente nel database il metodo esegue la chiamata all'API muffin labs restituendo
 //callback(-1, obj), se invece il doumento è presente nel databse restituisce callback(0, obj).
 //callback(-2, msg) indica la presenza di un errore di rete e msg specifica l'errore
 

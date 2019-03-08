@@ -5,7 +5,7 @@ const q         = "write_queue"
 
 const amqp_url  = 'amqp://localhost'
 
-//Producer
+//Producer invia dati al database
 
 exports.send = function(msg, callback) {
     amqp.connect(amqp_url, function(err, conn) {

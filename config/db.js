@@ -43,7 +43,7 @@ exports.fetch = function(date, callback) {
         url: find_url,  //_find
         json: true,     //comunicazione avviene utilizzando Json
         body: {         // Dalle API di couh db http://docs.couchdb.org/en/2.1.1/api/database/find.html?highlight=query
-            "selector":{
+            "selector":{ //Selectors are expressed as a JSON object describing documents of interest
                 // Ricerca nei documenti (tabella) di couchdb se presente un record che come campo "date" contiene
                 // la data specificata
                 "date":helper.resolveMonth(split_date[1]) + ' ' + day //Data in formato Month day Esempio: May 11
