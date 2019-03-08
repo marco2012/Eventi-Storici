@@ -2,7 +2,7 @@
 var ws          = require('../middlewares/ws')
 var YouTube     = require('youtube-node');
 var youTube     = new YouTube();
-var YOUTUBE_KEY = 'AIzaSyCgBUJdvcF7Cx5jA9qSMSsxRAwvT0zimOA'
+var YOUTUBE_KEY = ''
 youTube.setKey(YOUTUBE_KEY);
 
 exports.searchVideo = function(query, callback){
