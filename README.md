@@ -1,6 +1,12 @@
 # 📖 EVENTI STORICI 📖 - PROGETTO RETI DI CALCOLATORI
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
+<p align="center">
+  <img src="img/1.PNG" width="900" /> </br>
+  <img src="img/2.PNG" width="900" />
+</p>
+
+
 ## **Requisiti**
 - [x] Il servizio REST implementato deve interfacciare almeno due servizi REST *esterni*, cioè non su localhost
 - [x] Almeno uno dei servizi REST esterni deve essere *commerciale* (es: twitter, google, facebook, pubnub, parse, firbase etc)
@@ -35,3 +41,4 @@ Inoltre gli eventi vengono salvati su CouchDB attraverso working queue fornita d
 ## [**Link Utili**](https://github.com/marco2012/Eventi-Storici/wiki#link-utili)
 
 ## [**Struttura**](https://github.com/marco2012/Eventi-Storici/wiki#struttura)
+

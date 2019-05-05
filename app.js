@@ -13,12 +13,12 @@ const app = express()
 
 app.use("/static", express.static('views')); //cosi' vengono caricati i css esterni delle pagine html mandate con sendFile
 
-const exec = require('child_process').exec;
-exec('node ./receiver.js', function(error, stdout, stderr) {
-    console.log('stdout: ', stdout);
-    console.log('stderr: ', stderr);
-    if (error !== null) console.log('exec error: ', error);
-})
+// const exec = require('child_process').exec;
+// exec('node ./receiver.js', function(error, stdout, stderr) {
+//     console.log('stdout: ', stdout);
+//     console.log('stderr: ', stderr);
+//     if (error !== null) console.log('exec error: ', error);
+// })
 
 app.use(require('./controllers'))
 
