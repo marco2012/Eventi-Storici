@@ -2,8 +2,8 @@
 Il progetto consiste nella realizzazione di un servizio REST accedibile via Web
 
 <p align="center">
-  <img src="img/1.PNG" width="900" /> </br>
-  <img src="img/2.PNG" width="900" />
+  <img src="img/1.png" width="900" /> </br>
+  <img src="img/2.png" width="900" />
 </p>
 
 
